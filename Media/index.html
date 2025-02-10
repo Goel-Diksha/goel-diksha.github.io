@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diksha Goel - Conferences</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+        }
+
+         .header, .cover-photo, .container {
+            width: 100%;
+        }
+
+         .title-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2c2c2c;
+            padding: 10px 20px;
+            color: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .title-bar h4 {
+            margin: 0;
+        }
+         nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        .cover-photo {
+            height: 270px;
+            background: url('cover.jpg') no-repeat center center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            color: #fff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .cover-text h2, .cover-text h3 {
+            margin: 0;
+        }
+
+        .gallery-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 40px 20px;
+            background-color: #2a2a2a;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .gallery-item {
+            width: 45%;
+            background-color: #333;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .carousel-slide {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 10px;
+        }
+
+        .carousel-slide.active {
+            display: block;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            cursor: pointer;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 8px;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .caption {
+            margin-top: 10px;
+            color: #ffcc00;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Title Bar -->
+    <div class="title-bar">
+        <h4>Diksha Goel</h4>
+        <nav>
+            <ul>
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="Publications.html">Publications</a></li>
+                <li><a href="Projects.html">Projects</a></li>
+                <li><a href="Experience.html">Experience</a></li>
+                <li><a href="Reviewer.html">Reviewer</a></li>
+                <li><a href="News.html">News</a></li>
+                <li><a href="Awards.html">Awards</a></li>
+                <li><a href="Media.html">Media</a></li>
+                <li><a href="Contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Cover Photo -->
+    <div class="cover-photo">
+        <h2>Media</h2>
+    </div>
+
+    <div class="gallery-section">
+        <!-- ESORICS -->
+        <div class="gallery-item">
+            <div class="carousel-container" id="carousel-esorics">
+                <div class="carousel-slide active">
+                    <img src="ESORICS1.jpg" alt="ESORICS 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="ESORICS2.jpg" alt="ESORICS 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="ESORICS3.jpg" alt="ESORICS 3">
+                </div>
+                <span class="prev" onclick="changeSlide('carousel-esorics', -1)">&#10094;</span>
+                <span class="next" onclick="changeSlide('carousel-esorics', 1)">&#10095;</span>
+            </div>
+            <div class="caption">Presentation at ESORICS 2024 in 
+Bydgoszcz, Poland</div>
+        </div>
+
+<!-- HACL -->
+        <div class="gallery-item">
+            <div class="carousel-container" id="carousel-hacl">
+                <div class="carousel-slide active">
+                    <img src="HACL3.jpg" alt="HACL 1">
+                </div>
+
+                <span class="prev" onclick="changeSlide('carousel-hacl', -1)">&#10094;</span>
+                <span class="next" onclick="changeSlide('carousel-hacl', 1)">&#10095;</span>
+            </div>
+            <div class="caption">Presentation at HACL 2024 in Melbourne, Australia</div>
+        </div>
+
+
+        <!-- GECCO -->
+        <div class="gallery-item">
+            <div class="carousel-container" id="carousel-gecco">
+                <div class="carousel-slide active">
+                    <img src="GECCO1.jpg" alt="GECCO 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="GECCO2.jpg" alt="GECCO 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="GECCO3.jpg" alt="GECCO 3">
+                </div>
+                <span class="prev" onclick="changeSlide('carousel-gecco', -1)">&#10094;</span>
+                <span class="next" onclick="changeSlide('carousel-gecco', 1)">&#10095;</span>
+            </div>
+            <div class="caption">Presentation at GECCO 2023 in Lisbon, Portugal</div>
+        </div>
+
+        
+        <!-- AI-OPT -->
+        <div class="gallery-item">
+            <div class="carousel-container" id="carousel-aiopt">
+                <div class="carousel-slide active">
+                    <img src="AIOPT1.jpg" alt="AI-OPT 1">
+                </div>
+                <div class="carousel-slide">
+                    <img src="AIOPT2.jpg" alt="AI-OPT 2">
+                </div>
+                <div class="carousel-slide">
+                    <img src="AIOPT3.jpg" alt="AI-OPT 2">
+                </div>
+                <span class="prev" onclick="changeSlide('carousel-aiopt', -1)">&#10094;</span>
+                <span class="next" onclick="changeSlide('carousel-aiopt', 1)">&#10095;</span>
+            </div>
+            <div class="caption">Presentation at AI-OPT 2023 in Melbourne, Australia</div>
+        </div>
+
+        <!-- PhD Convocation -->
+        <div class="gallery-item">
+            <div class="carousel-container" id="carousel-convocation">
+                <div class="carousel-slide active">
+                    <img src="convo1.jpg" alt="PhD Convocation 1">
+                </div>
+
+                <span class="prev" onclick="changeSlide('carousel-convocation', -1)">&#10094;</span>
+                <span class="next" onclick="changeSlide('carousel-convocation', 1)">&#10095;</span>
+            </div>
+            <div class="caption">PhD Convocation at the University of Adelaide</div>
+        </div>
+<!-- CSCRC Symposium -->
+<div class="gallery-item">
+    <div class="carousel-container" id="carousel-cscrc">
+        <div class="carousel-slide active">
+            <img src="CSCRC1.jpg" alt="CSCRC Symposium 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="CSCRC2.jpg" alt="CSCRC Symposium 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="CSCRC3.jpg" alt="CSCRC Symposium 3">
+        </div>
+        <span class="prev" onclick="changeSlide('carousel-cscrc', -1)">&#10094;</span>
+        <span class="next" onclick="changeSlide('carousel-cscrc', 1)">&#10095;</span>
+    </div>
+    <div class="caption">CSCRC Symposium 2023 in Canberra, Australia
+</div>
+</div>
+
+    </div>
+
+    <script>
+        function changeSlide(carouselId, direction) {
+            const container = document.getElementById(carouselId);
+            const slides = container.getElementsByClassName('carousel-slide');
+            let activeIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+
+            slides[activeIndex].classList.remove('active');
+            activeIndex = (activeIndex + direction + slides.length) % slides.length;
+            slides[activeIndex].classList.add('active');
+        }
+    </script>
+</body>
+</html>
