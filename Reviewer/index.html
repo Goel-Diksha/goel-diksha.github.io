@@ -3,167 +3,393 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diksha Goel - Reviewer</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Diksha Goel | Reviewer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Georgia', serif;
+        /* Reset & Base Styles */
+        * {
             margin: 0;
-            background-color: #1a1a1a;
-            color: #e0e0e0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        .header, .cover-photo, .container {
-            width: 100%;
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F5F7FA;
+            color: #2A3A54;
+            line-height: 1.4;
+            overflow-x: hidden;
         }
 
+        /* Navigation */
         .title-bar {
+            position: sticky;
+            top: 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: #2c2c2c;
-            padding: 10px 20px;
-            color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            background-color: #FFFFFF;
+            padding: 8px 15px; /* Further reduced */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            transition: background-color 0.3s;
         }
 
-        .title-bar h4 {
-            margin: 0;
+        .title-bar.reviewer-active {
+            background-color: #2A3A54;
+        }
+
+        .title-bar.reviewer-active .logo,
+        .title-bar.reviewer-active nav ul li a {
+            color: #FFFFFF;
+        }
+
+        .title-bar.reviewer-active nav ul li a:hover,
+        .title-bar.reviewer-active nav ul li a.active {
+            color: #E0E0E0;
+        }
+
+        .logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 20px; /* Reduced further */
+            font-weight: 700;
+            color: #2A3A54;
+            letter-spacing: 0.5px; /* Tightened */
         }
 
         nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
             display: flex;
-        }
-
-        nav ul li {
-            margin-left: 20px;
+            list-style: none;
         }
 
         nav ul li a {
+            color: #2A3A54;
             text-decoration: none;
-            color: white;
-            padding: 10px 20px;
+            padding: 6px 10px; /* Further reduced */
+            font-weight: 400;
+            font-family: 'Poppins', sans-serif;
+            transition: all 0.3s ease;
+            position: relative;
+            font-size: 13px; /* Reduced further */
         }
 
-        nav ul li a:hover {
-            background-color: #555;
+        nav ul li a:hover, nav ul li a.active {
+            color: #2A3A54;
         }
 
-        .cover-photo {
-            height: 270px;
-            background: url('cover.jpg') no-repeat center center;
-            background-size: cover;
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px; /* Reduced from 2px */
+            background: #2A3A54;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s ease;
+        }
+
+        nav ul li a:hover::after, nav ul li a.active::after {
+            width: 50%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 200px; /* Reduced further */
+            width: 100%;
+            background: linear-gradient(135deg, rgba(42, 58, 84, 0.8), rgba(66, 165, 245, 0.5)), url('cover.jpg') no-repeat center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 36px;
-            color: #fff;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            text-align: center;
+            overflow: hidden;
         }
 
-        .cover-text h2 {
-            margin: 0;
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
         }
 
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 0.6s ease-in-out;
+        }
+
+        .hero-content h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px; /* Reduced further */
+            font-weight: 700;
+            color: #FFFFFF;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Smaller shadow */
+            letter-spacing: 0.5px; /* Tightened */
+        }
+
+        /* Reviewer Section */
         .reviewer-section {
-            background-color: #333;
-            padding: 20px;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            width: 90%;
-            max-width: 1000px;
-            color: #e0e0e0;
+            max-width: 1200px;
+            margin: 20px auto; /* Reduced further */
+            padding: 15px; /* Reduced further */
+            background: linear-gradient(135deg, #F5F7FA 0%, #EAF1FB 100%);
+            border-radius: 8px; /* Reduced further */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
         }
 
         .reviewer-category {
-            margin-bottom: 30px;
+            display: flex;
+            align-items: flex-start;
+            padding: 5px 0;
         }
 
-        .reviewer-category h3 {
-            font-size: 24px;
-            color: #ffcc00;
-            margin-bottom: 10px;
+        .category-title {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px; /* Reduced further */
+            font-weight: 600;
+            color: #2A3A54;
+            width: 120px; /* Reduced further */
+            text-align: center;
         }
 
         .reviewer-list {
-            font-size: 16px;
-            line-height: 1.6;
-            list-style-type: disc;
-            margin-left: 20px;
+            flex-grow: 1;
+            padding-left: 10px;
         }
 
+        .reviewer-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .reviewer-list ul li {
+            font-size: 13px; /* Reduced further */
+            color: #2A3A54;
+            line-height: 1.4;
+            margin-bottom: 5px; /* Reduced from 15px */
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .reviewer-list ul li::before {
+            content: '•';
+            color: #42A5F5;
+            position: absolute;
+            left: 0;
+            font-size: 16px; /* Slightly smaller */
+        }
+
+        .reviewer-list ul li strong {
+            font-weight: 600;
+        }
+
+        /* Headings */
+        h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 24px; /* Reduced further */
+            color: #2A3A54;
+            margin-bottom: 10px; /* Reduced further */
+            position: relative;
+            text-align: center;
+        }
+
+        h2::after {
+            content: '';
+            width: 30px; /* Reduced further */
+            height: 2px; /* Reduced further */
+            background: linear-gradient(to right, #2A3A54, #42A5F5);
+            display: block;
+            margin-top: 5px;
+            border-radius: 1px; /* Reduced */
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Horizontal Line */
         .horizontal-line {
             width: 100%;
-            height: 4px;
-            background-color: #ffcc00;
-            margin: 20px 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #42A5F5, transparent);
+            margin: 8px 0; /* Reduced further */
+        }
+
+        /* Section Divider */
+        .section-divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #42A5F5, transparent);
+            margin: 5px 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px; /* Reduced further */
+            background: #FFFFFF;
+            color: #2A3A54;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Smaller shadow */
+            font-size: 12px; /* Reduced further */
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px); /* Reduced further */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            opacity: 0;
+            animation: fadeInUp 0.5s ease forwards; /* Faster */
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .title-bar {
+                flex-direction: column;
+                padding: 6px 10px; /* Reduced further */
+            }
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 5px;
+            }
+            nav ul li a {
+                padding: 4px 8px; /* Reduced further */
+                font-size: 12px; /* Reduced further */
+            }
+            .hero {
+                height: 150px; /* Reduced further */
+            }
+            .hero-content h1 {
+                font-size: 24px; /* Reduced further */
+            }
+            .reviewer-section {
+                padding: 10px; /* Reduced further */
+                margin: 15px auto; /* Reduced further */
+            }
+            .reviewer-category {
+                flex-direction: column;
+                align-items: center;
+                padding: 3px 0; /* Reduced further */
+            }
+            .category-title {
+                margin-bottom: 8px; /* Reduced further */
+                width: 100%;
+                font-size: 16px; /* Reduced further */
+            }
+            .reviewer-list {
+                padding-left: 0;
+            }
+            .reviewer-list ul li {
+                font-size: 12px; /* Reduced further */
+                margin-bottom: 4px; /* Reduced further */
+                padding-left: 12px; /* Reduced */
+            }
+            .reviewer-list ul li::before {
+                font-size: 14px; /* Reduced further */
+            }
         }
     </style>
 </head>
 <body>
-    <div class="title-bar">
-        <h4>Diksha Goel</h4>
-                <nav>
-        <ul>
-        <li><a href="/index.html">About Me</a></li>
-        <li><a href="/Publications/">Publications</a></li>
-        <li><a href="/Projects/">Projects</a></li>
-        <li><a href="/Experience/">Experience</a></li>
-        <li><a href="/Reviewer/">Reviewer</a></li>
-        <li><a href="/News/">News</a></li>
-        <li><a href="/Awards/">Awards</a></li>
-        <li><a href="/Media/">Media</a></li>
-        <li><a href="/Contact/" class="active">Contact</a></li>
-        </ul>
-    </nav>
-    </div>
-    <div class="cover-photo">
-        <div class="cover-text">
-            <h2>Reviewer</h2>
-        </div>
-    </div>
-    <div class="reviewer-section">
-        <div class="reviewer-category">
-            <h3>Conference Program Committees</h3>
-            <ul class="reviewer-list">
-                <li> The Web Conference (WWW'25)</li>
-                <li> USENIX Security Symposium (USENIX Security '25)</li>
-                <li> Privacy Enhancing Technologies Symposium (PoPETs '25)</li>
-                <li> International Symposium on Research in Attacks, Intrusions, and Defenses (RAID'25)</li>
-                <li>International Conference on Web Intelligence and Intelligent Agent Technology (WI-IAT'21, WI-IAT'22, WI-IAT'23)</li>
+    <!-- Navigation -->
+    <header class="title-bar reviewer-active">
+        <h1 class="logo">Diksha Goel</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">About Me</a></li>
+                <li><a href="/Publications/">Publications</a></li>
+                <li><a href="/Projects/">Projects</a></li>
+                <li><a href="/Experience/">Experience</a></li>
+                <li><a href="/Reviewer/" class="active">Reviewer</a></li>
+                <li><a href="/News/">News</a></li>
+                <li><a href="/Awards/">Awards</a></li>
+                <li><a href="/Media/">Media</a></li>
+                <li><a href="/Contact/">Contact</a></li>
             </ul>
-        </div>
+        </nav>
+    </header>
 
-        <div class="reviewer-category">
-            <h3>Journal Reviewer</h3>
-            <ul class="reviewer-list">
-                <li>IEEE Transactions on Neural Networks and Learning System (Impact Factor: 10.2)</li>
-                <li>Expert Systems with Applications (Impact Factor: 7.5)</li>
-                <li>Information Science (Impact Factor: 7.9)</li>
-                <li>Knowledge-Based Systems (Impact Factor: 7.2)</li>
-                
-                <li>IEEE Transactions on Information Forensics and Security (Impact Factor: 6.3) </li>
-                <li>Journal of Intelligent Systems (Impact Factor: 2.1)</li>
-            </ul>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Reviewer</h1>
         </div>
-  
-        <div class="reviewer-category">
-            <h3>Organizer</h3>
-            <ul class="reviewer-list">
-                <li> Human and AI in cybersecurity learning (HACL) Workshop 2024, Melbourne, Australia</li>
-            </ul>
-        </div>
+    </section>
 
+    <!-- Reviewer Section -->
+    <section class="reviewer-section fade-in">
+        <h2>Reviewer Roles</h2>
+        <!-- Conference Program Committees -->
         <div class="reviewer-category">
-            <h3>Volunteer</h3>
-            <ul class="reviewer-list">
-                <li>The Genetic and Evolutionary Computation Conference (GECCO'22, GECCO'23)</li>
-            </ul>
+            <div class="category-title">Conference Program Committees</div>
+            <div class="reviewer-list">
+                <ul>
+                    <li><strong>The Web Conference (WWW'25)</strong></li>
+                    <li><strong>USENIX Security Symposium (USENIX Security '25)</strong></li>
+                    <li><strong>Privacy Enhancing Technologies Symposium (PoPETs '25)</strong></li>
+                    <li><strong>International Symposium on Research in Attacks, Intrusions, and Defenses (RAID'25)</strong></li>
+                    <li><strong>International Conference on Web Intelligence and Intelligent Agent Technology</strong> (WI-IAT'21, WI-IAT'22, WI-IAT'23)</li>
+                </ul>
+            </div>
         </div>
-    </div>
+        <div class="horizontal-line"></div>
+
+        <!-- Journal Reviewer -->
+        <div class="reviewer-category">
+            <div class="category-title">Journal Reviewer</div>
+            <div class="reviewer-list">
+                <ul>
+                    <li><strong>IEEE Transactions on Neural Networks and Learning System</strong> (Impact Factor: 10.2)</li>
+                    <li><strong>Expert Systems with Applications</strong> (Impact Factor: 7.5)</li>
+                    <li><strong>Information Science</strong> (Impact Factor: 7.9)</li>
+                    <li><strong>Knowledge-Based Systems</strong> (Impact Factor: 7.2)</li>
+                    <li><strong>IEEE Transactions on Information Forensics and Security</strong> (Impact Factor: 6.3)</li>
+                    <li><strong>Journal of Intelligent Systems</strong> (Impact Factor: 2.1)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="horizontal-line"></div>
+
+        <!-- Organizer -->
+        <div class="reviewer-category">
+            <div class="category-title">Organizer</div>
+            <div class="reviewer-list">
+                <ul>
+                    <li><strong>Human and AI in Cybersecurity Learning (HACL) Workshop</strong> - 2024, Melbourne, Australia</li>
+                </ul>
+            </div>
+        </div>
+        <div class="horizontal-line"></div>
+
+        <!-- Volunteer -->
+        <div class="reviewer-category">
+            <div class="category-title">Volunteer</div>
+            <div class="reviewer-list">
+                <ul>
+                    <li><strong>The Genetic and Evolutionary Computation Conference</strong> (GECCO'22, GECCO'23)</li>
+                </ul>
+            </div>
+        </div>
+        <div class="horizontal-line"></div>
+    </section>
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Diksha Goel. All rights reserved.</p>
+    </footer>
 </body>
 </html>
