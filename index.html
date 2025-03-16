@@ -1,168 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diksha Goel - Home</title>
+    <title>Diksha Goel | Research Scientist</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-    <!-- Title Bar -->
-    <div class="title-bar">
-        <h4>Diksha Goel</h4>
+    <!-- Navigation -->
+    <header class="title-bar sticky about-me-active">
+        <h1 class="logo">Diksha Goel</h1>
         <nav>
-        <ul>
-        <li><a href="/index.html">About Me</a></li>
-        <li><a href="/Publications/">Publications</a></li>
-        <li><a href="/Projects/">Projects</a></li>
-        <li><a href="/Experience/">Experience</a></li>
-        <li><a href="/Reviewer/">Reviewer</a></li>
-        <li><a href="/News/">News</a></li>
-        <li><a href="/Awards/">Awards</a></li>
-        <li><a href="/Media/">Media</a></li>
-        <li><a href="/Contact/" class="active">Contact</a></li>
-            
-        </ul>
-    </nav>
-    </div>
+            <ul>
+                <li><a href="/index.html" class="active">About Me</a></li>
+                <li><a href="/Publications/">Publications</a></li>
+                <li><a href="/Projects/">Projects</a></li>
+                <li><a href="/Experience/">Experience</a></li>
+                <li><a href="/Reviewer/">Reviewer</a></li>
+                <li><a href="/News/">News</a></li>
+                <li><a href="/Awards/">Awards</a></li>
+                <li><a href="/Media/">Media</a></li>
+                <li><a href="/Contact/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Cover Section -->
-    <div class="cover-photo">
-        <div class="cover-text">
-            <h2 class="cover-title" style="text-align: center;">Diksha Goel</h2>
-            <h4 class="cover-subtitle">Research Scientist, CSIRO's Data61</h4>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Diksha Goel</h1>
+            <h3>Research Scientist | CSIRO's Data61</h3>
         </div>
-    </div>
+    </section>
 
-    <!-- Main Container -->
+    <!-- Main Content -->
     <div class="container">
-        <!-- Left Column -->
-        <div class="left-column">
+        <aside class="left-column">
             <img src="Diksha_Goel.JPG" alt="Diksha Goel" class="profile-photo">
             <div class="social-icons">
-                <a href="https://x.com/Diksha__Goel"><img src="twitter1.png" alt="Twitter"></a>
-                <a href="https://scholar.google.com/citations?hl=en&user=USow104AAAAJ&view_op=list_works&sortby=pubdate"><img src="google-scholar.png" alt="Google Scholar"></a>
-                <a href="https://www.linkedin.com/in/diksha-goel-055b9b161/"><img src="linkldn.png" alt="LinkedIn"></a>
-                <a href="mailto:diksha.goel@csiro.au"><img src="email.jpeg" alt="Email"></a>
+                <a href="https://x.com/Diksha__Goel" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://scholar.google.com/citations?hl=en&user=USow104AAAAJ&view_op=list_works&sortby=pubdate" class="social-icon"><i class="fab fa-google"></i></a>
+                <a href="https://www.linkedin.com/in/diksha-goel-055b9b161/" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:diksha.goel@csiro.au" class="social-icon"><i class="fas fa-envelope"></i></a>
             </div>
-        </div>
+        </aside>
 
-        <!-- Right Column -->
-        <div class="right-column">
-            <!-- About Section -->
-            <section id="home">
-                <h2  class="section-heading">About Me</h2>
-                <p>
-                Dr. Diksha Goel is a Research Scientist at <a href="https://www.csiro.au/en/research/technology-space?start=0&count=12" style="text-decoration: underline; color: #ffcc00;">CSIRO’s Data61</a> in Melbourne, Australia. She specializes in Cybersecurity, Artificial Intelligence, Game Theory, and Graph Data Mining, with her research dedicated to developing intelligent, AI-powered security solutions that counter emerging cyber threats and safeguard critical infrastructures. </p>
-                    
-                <p>Dr. Goel earned her Ph.D. in Computer Science from the <a href="https://www.adelaide.edu.au/" style="text-decoration: underline; color: #ffcc00;">University of Adelaide</a>, Australia, where she focused on the intersection of Cybersecurity and AI to create advanced frameworks for cyber resilience, autonomous defense, and intelligent security strategies. Her expertise encompasses machine learning-driven security, game-theoretic defense modeling, and large-scale graph analysis for vulnerability detection. </p>
-                
-                <p>Prior to her current role, she served as a Postdoctoral Fellow at <a href="https://www.csiro.au/en/research/technology-space?start=0&count=12" style="text-decoration: underline; color: #ffcc00;">CSIRO’s Data61</a>, contributing to national cyber defense initiatives through the Cyber Security Cooperative Research Centre (CSCRC). With an impressive publication record in top-tier journals and leading cybersecurity conferences, her work has significantly influenced both academic research and industry practices. </p>
-                
-                <p>Driven by a passion for translating theoretical advancements into practical solutions, Dr. Goel is committed to pioneering scalable, proactive, and intelligent security frameworks. Her work continues to strengthen digital infrastructures, enhance cyber resilience, and promote a safer, AI-driven cyber landscape.
-                </p>
+        <main class="right-column">
+            <section id="about" class="fade-in">
+                <h2>About Me</h2>
+                <div class="about-card">
+		<p> Dr. Diksha Goel is a Research Scientist at <a href="https://www.csiro.au/en/research/technology-space?start=0&count=12">CSIRO’s Data61</a>, Melbourne, specializing in Cybersecurity, Artificial Intelligence, Game Theory, and Graph Data Mining. Her research focuses on developing AI-driven security solutions to counter emerging cyber threats and safeguard critical infrastructures. Previously, as a Postdoctoral Fellow at <a href="https://www.csiro.au/en/research/technology-space?start=0&count=12">CSIRO’s Data61</a>, she contributed to national cyber defense initiatives through the Cyber Security Cooperative Research Centre (CSCRC). Her research, published in leading cybersecurity journals and conferences, has influenced both academia and industry.
+
+</p> 
+<p>She earned her Ph.D. in Computer Science from the <a href="https://www.adelaide.edu.au/">University of Adelaide</a>, where she designed advanced frameworks for cyber resilience, autonomous defense, and intelligent security strategies. Her expertise spans machine learning-driven security, game-theoretic defense modeling, and large-scale graph analytics for vulnerability detection. Dedicated to bridging research and real-world application, Dr. Goel advances scalable, proactive, and intelligent security frameworks, strengthening digital infrastructure and enhancing cyber resilience.</p>
+                </div>
             </section>
-        </div>
+        </main>
     </div>
 
-<div class="education-section">
-<h2 class="section-heading">Research</h2>
-    <p>
-        My research is at the cutting edge of cybersecurity, focusing on AI-driven solutions to protect critical infrastructures. The key areas of my work include:
-    </p>
+    <!-- Divider -->
+    <div class="section-divider"></div>
 
-    <ul>
-        <li>
-            <p><span style="color: #ffcc00;">AI-Driven Cyber Defense</span>: Deploy cutting-edge reinforcement, lifelong, and deep learning to build adaptive security systems for real-time threat detection and autonomous defense.
-            </p>
-        </li>
-        <li>
-            <p><span style="color: #ffcc00;">Graph Analytics & Data Mining</span>: Design and develop robust, scalable defenses by harnessing state-of-the-art graph neural networks and combinatorial optimization to unravel complex network architectures and pinpoint critical vulnerabilities.
-            </p>
-        </li>
-        <li>
-            <p><span style="color: #ffcc00;">Evolutionary Computation, Game Theory & LLMs</span>: Design and develop innovative defense solutions by integrating evolutionary algorithms, strategic Stackelberg game models, and large language models to drive adaptive optimization and deliver precise adversarial simulations.
-            </p>
-        </li>
-    </ul>
+    <!-- Research Section -->
+    <section class="research-section fade-in">
+        <center><h2>Research</h2></center>
+        <p>My research focuses on cutting-edge AI-driven cybersecurity solutions to protect critical infrastructures.</p>
+	<p>For a comprehensive list of my publications, please <a href="https://scholar.google.com/citations?hl=en&user=USow104AAAAJ&view_op=list_works&sortby=pubdate">click here</a>.</p>
+        <div class="research-grid">
+            <div class="research-card">
+                <div class="research-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>AI-Driven Cyber Defense</h3>
+                <ul>
+                    <li>Develop adaptive reinforcement learning for real-time threat detection.</li>
+                    <li>Design Lifelong learning that evolves with emerging threats.</li>
+                    <li>Deep learning for autonomous defense against advanced attacks.</li>
+                </ul>
+            </div>
+            <div class="research-card">
+                <div class="research-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3>Intelligent Network Security & Analytics</h3>
+                <ul>
+                    <li>Develop GNNs for modeling and analyzing network architectures.</li>
+                    <li>Design scalable defenses to mitigate risks in large-scale networked systems.</li>
+                </ul>
+            </div>
+            <div class="research-card">
+                <div class="research-icon">
+                    <i class="fas fa-chess"></i>
+                </div>
+                <h3>Game Theory & LLMs</h3>
+                <ul>
+                    <li>Develop and design defense strategies using evolutionary algorithms.</li>
+                    <li>Model adversarial interactions with Stackelberg game theory.</li>
+                    <li>Leverage LLMs for advanced threat prediction and response simulation.</li>
+                </ul>
+            </div>
+        </div>
+        
+    </section>
 
-    <p>
-        For a comprehensive list of my publications, please <a href="https://scholar.google.com/citations?hl=en&user=USow104AAAAJ&view_op=list_works&sortby=pubdate" style="text-decoration: underline; color: #ffcc00;">click here</a>.
-    </p>
-</div>
 
-<!-- Education Section -->
-    <section class="education-section">
-        <h2 class="section-heading">Education</h2>
-        <div class="card-container">
-            <!-- Education Card 1 -->
+
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Education Section -->
+    <section class="education-section fade-in">
+        <center><h2>Education</h2></center>
+        <div class="education-grid">
             <div class="education-card">
-                <div class="card-header">
+                <div class="education-icon">
                     <i class="fas fa-user-graduate"></i>
-                    <span class="education-year">2019 - 2023</span>
                 </div>
-                <div class="card-body">
-                    <h3 class="education-degree">Doctor of Philosophy (Ph.D.)</h3>
-                    <p class="education-detail">Computer Science (Cyber Security & Machine Learning)</p>
-                    <p class="education-university"><a href="https://www.adelaide.edu.au/" target="_blank"; style="text-decoration: underline; color: #ffcc00;">University of Adelaide, Adelaide, Australia</a></p>
-                    <p class="education-thesis"><em>Thesis: 
-        <a href="https://arxiv.org/pdf/2310.10667" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           style="text-decoration: underline; color: #ffcc00;">
-           Enhancing Network Resilience through Machine Learning-powered Graph Combinatorial Optimization
-        </a>
-    </em>
-</p>
-                </div>
+                <h3>Doctor of Philosophy</h3>
+		<h3>2019 - 2023</h3>
+                <ul>
+                    
+                    <li> Computer Science (Cyber Security & Machine Learning)</li>
+                    <li> <a href="https://www.adelaide.edu.au/" target="_blank">University of Adelaide, Australia</a></li>
+                    <li><strong>Thesis:</strong> <a href="https://arxiv.org/pdf/2310.10667" target="_blank" rel="noopener noreferrer">Enhancing Network Resilience through Machine Learning-powered Graph Combinatorial Optimization</a></li>
+                </ul>
             </div>
-
-            <!-- Education Card 2 -->
             <div class="education-card">
-                <div class="card-header">
+                <div class="education-icon">
                     <i class="fas fa-graduation-cap"></i>
-                    <span class="education-year">2016 - 2018</span>
                 </div>
-                <div class="card-body">
-                    <h3 class="education-degree">Master of Technology</h3>
-                    <p class="education-detail">Computer Science (Cyber Security)</p>
-                    <p class="education-university"><a href="https://nitkkr.ac.in/" target="_blank"; style="text-decoration: underline; color: #ffcc00;">National Institute of Technology, Kurukshetra, India</a></p>
-                    <p class="education-thesis">
-    <em>Thesis: 
-        <a href="https://arxiv.org/pdf/2501.00260" 
-           target="_blank" 
-           rel="noopener noreferrer" 
-           style="text-decoration: underline; color: #ffcc00;">
-           Detection and Prevention of Smishing Attacks
-        </a>
-    </em>
-</p>
-                </div>
+                <h3>Master of Technology</h3>
+		<h3>2016 - 2018</h3>
+                <ul>
+                    
+                    <li> Computer Science (Cyber Security)</li>
+                    <li><a href="https://nitkkr.ac.in/" target="_blank">National Institute of Technology, Kurukshetra, India</a></li>
+                    <li><a href="https://arxiv.org/pdf/2501.00260" target="_blank" rel="noopener noreferrer">Detection and Prevention of Smishing Attacks</a></li>
+                </ul>
             </div>
-
-            <!-- Education Card 3 -->
             <div class="education-card">
-                <div class="card-header">
+                <div class="education-icon">
                     <i class="fas fa-book"></i>
-                    <span class="education-year">2011 - 2015</span>
                 </div>
-                <div class="card-body">
-                    <h3 class="education-degree">Bachelor of Technology</h3>
-                    <p class="education-detail">Computer Science & Engineering</p>
-                    <p class="education-university"><a href="https://www.uietkuk.ac.in/" target="_blank"; style="text-decoration: underline; color: #ffcc00;">University Institute of Engineering & Technology, Kurukshetra, India</a></p>
-                </div>
+                <h3>Bachelor of Technology</h3>
+		<h3>2011 - 2015</h3>
+                <ul>
+                    
+                    <li> Computer Science & Engineering</li>
+                    <li> <a href="https://www.uietkuk.ac.in/" target="_blank">University Institute of Engineering & Technology, Kurukshetra, India</a></li>
+                </ul>
             </div>
         </div>
     </section>
 
+    <!-- Divider -->
+    <div class="section-divider"></div>
 
-<div style="text-align: center; margin-top: 100px;">
-    <div style="width: 300px; height: 200px; margin: auto;">
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=HMWaaWNL0y9U-racfO_XyUffI9LvBVUgYuHu3EKiNqI&co=404040&cmo=ffcc00&cmn=3acc3a&ct=e0e0e0'></script>
+    <!-- Visitor Map -->
+    <div class="map-container fade-in">
+        <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=HMWaaWNL0y9U-racfO_XyUffI9LvBVUgYuHu3EKiNqI&co=404040&cmo=ffcc00&cmn=3acc3a&ct=e0e0e0'></script>
     </div>
-</div>
-</body>
 
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Diksha Goel. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript for Back-to-Top Visibility -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+    </script>
+</body>
 </html>
