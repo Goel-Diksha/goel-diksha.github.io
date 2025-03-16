@@ -4,305 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diksha Goel | Reviewer</title>
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* Reset & Base Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #F5F7FA;
-            color: #2A3A54;
-            line-height: 1.4;
-            overflow-x: hidden;
-        }
-
-        /* Navigation */
-        .title-bar {
-            position: sticky;
-            top: 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #FFFFFF;
-            padding: 8px 15px; /* Further reduced */
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            z-index: 1000;
-            transition: background-color 0.3s;
-        }
-
-        .title-bar.reviewer-active {
-            background-color: #2A3A54;
-        }
-
-        .title-bar.reviewer-active .logo,
-        .title-bar.reviewer-active nav ul li a {
-            color: #FFFFFF;
-        }
-
-        .title-bar.reviewer-active nav ul li a:hover,
-        .title-bar.reviewer-active nav ul li a.active {
-            color: #E0E0E0;
-        }
-
-        .logo {
-            font-family: 'Poppins', sans-serif;
-            font-size: 20px; /* Reduced further */
-            font-weight: 700;
-            color: #2A3A54;
-            letter-spacing: 0.5px; /* Tightened */
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-        }
-
-        nav ul li a {
-            color: #2A3A54;
-            text-decoration: none;
-            padding: 6px 10px; /* Further reduced */
-            font-weight: 400;
-            font-family: 'Poppins', sans-serif;
-            transition: all 0.3s ease;
-            position: relative;
-            font-size: 13px; /* Reduced further */
-        }
-
-        nav ul li a:hover, nav ul li a.active {
-            color: #2A3A54;
-        }
-
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px; /* Reduced from 2px */
-            background: #2A3A54;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            transition: width 0.3s ease;
-        }
-
-        nav ul li a:hover::after, nav ul li a.active::after {
-            width: 50%;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 200px; /* Reduced further */
-            width: 100%;
-            background: linear-gradient(135deg, rgba(42, 58, 84, 0.8), rgba(66, 165, 245, 0.5)), url('cover.jpg') no-repeat center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            overflow: hidden;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            animation: fadeInUp 0.6s ease-in-out;
-        }
-
-        .hero-content h1 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 32px; /* Reduced further */
-            font-weight: 700;
-            color: #FFFFFF;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Smaller shadow */
-            letter-spacing: 0.5px; /* Tightened */
-        }
-
-        /* Reviewer Section */
-        .reviewer-section {
-            max-width: 1200px;
-            margin: 20px auto; /* Reduced further */
-            padding: 15px; /* Reduced further */
-            background: linear-gradient(135deg, #F5F7FA 0%, #EAF1FB 100%);
-            border-radius: 8px; /* Reduced further */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        .reviewer-category {
-            display: flex;
-            align-items: flex-start;
-            padding: 5px 0;
-        }
-
-        .category-title {
-            font-family: 'Poppins', sans-serif;
-            font-size: 18px; /* Reduced further */
-            font-weight: 600;
-            color: #2A3A54;
-            width: 120px; /* Reduced further */
-            text-align: center;
-        }
-
-        .reviewer-list {
-            flex-grow: 1;
-            padding-left: 10px;
-        }
-
-        .reviewer-list ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .reviewer-list ul li {
-            font-size: 13px; /* Reduced further */
-            color: #2A3A54;
-            line-height: 1.4;
-            margin-bottom: 5px; /* Reduced from 15px */
-            padding-left: 15px;
-            position: relative;
-        }
-
-        .reviewer-list ul li::before {
-            content: '•';
-            color: #42A5F5;
-            position: absolute;
-            left: 0;
-            font-size: 16px; /* Slightly smaller */
-        }
-
-        .reviewer-list ul li strong {
-            font-weight: 600;
-        }
-
-        /* Headings */
-        h2 {
-            font-family: 'Poppins', sans-serif;
-            font-size: 24px; /* Reduced further */
-            color: #2A3A54;
-            margin-bottom: 10px; /* Reduced further */
-            position: relative;
-            text-align: center;
-        }
-
-        h2::after {
-            content: '';
-            width: 30px; /* Reduced further */
-            height: 2px; /* Reduced further */
-            background: linear-gradient(to right, #2A3A54, #42A5F5);
-            display: block;
-            margin-top: 5px;
-            border-radius: 1px; /* Reduced */
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Horizontal Line */
-        .horizontal-line {
-            width: 100%;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #42A5F5, transparent);
-            margin: 8px 0; /* Reduced further */
-        }
-
-        /* Section Divider */
-        .section-divider {
-            width: 100%;
-            height: 1px;
-            background: linear-gradient(to right, transparent, #42A5F5, transparent);
-            margin: 5px 0;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 10px; /* Reduced further */
-            background: #FFFFFF;
-            color: #2A3A54;
-            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05); /* Smaller shadow */
-            font-size: 12px; /* Reduced further */
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(10px); /* Reduced further */
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            opacity: 0;
-            animation: fadeInUp 0.5s ease forwards; /* Faster */
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .title-bar {
-                flex-direction: column;
-                padding: 6px 10px; /* Reduced further */
-            }
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-                margin-top: 5px;
-            }
-            nav ul li a {
-                padding: 4px 8px; /* Reduced further */
-                font-size: 12px; /* Reduced further */
-            }
-            .hero {
-                height: 150px; /* Reduced further */
-            }
-            .hero-content h1 {
-                font-size: 24px; /* Reduced further */
-            }
-            .reviewer-section {
-                padding: 10px; /* Reduced further */
-                margin: 15px auto; /* Reduced further */
-            }
-            .reviewer-category {
-                flex-direction: column;
-                align-items: center;
-                padding: 3px 0; /* Reduced further */
-            }
-            .category-title {
-                margin-bottom: 8px; /* Reduced further */
-                width: 100%;
-                font-size: 16px; /* Reduced further */
-            }
-            .reviewer-list {
-                padding-left: 0;
-            }
-            .reviewer-list ul li {
-                font-size: 12px; /* Reduced further */
-                margin-bottom: 4px; /* Reduced further */
-                padding-left: 12px; /* Reduced */
-            }
-            .reviewer-list ul li::before {
-                font-size: 14px; /* Reduced further */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Navigation -->
-    <header class="title-bar reviewer-active">
+    <header class="title-bar sticky reviewer-active">
         <h1 class="logo">Diksha Goel</h1>
         <nav>
             <ul>
@@ -328,12 +36,13 @@
     </section>
 
     <!-- Reviewer Section -->
-    <section class="reviewer-section fade-in">
-        <h2>Reviewer Roles</h2>
+    <section class="publication-section fade-in">
+        <center><h2>Reviewer Roles</h2></center>
+
         <!-- Conference Program Committees -->
-        <div class="reviewer-category">
-            <div class="category-title">Conference Program Committees</div>
-            <div class="reviewer-list">
+        <div class="publication-year">
+            <div class="year">Conference Program Committees</div>
+            <div class="publications">
                 <ul>
                     <li><strong>The Web Conference (WWW'25)</strong></li>
                     <li><strong>USENIX Security Symposium (USENIX Security '25)</strong></li>
@@ -346,9 +55,9 @@
         <div class="horizontal-line"></div>
 
         <!-- Journal Reviewer -->
-        <div class="reviewer-category">
-            <div class="category-title">Journal Reviewer</div>
-            <div class="reviewer-list">
+        <div class="publication-year">
+            <div class="year">Journal Reviewer</div>
+            <div class="publications">
                 <ul>
                     <li><strong>IEEE Transactions on Neural Networks and Learning System</strong> (Impact Factor: 10.2)</li>
                     <li><strong>Expert Systems with Applications</strong> (Impact Factor: 7.5)</li>
@@ -362,9 +71,9 @@
         <div class="horizontal-line"></div>
 
         <!-- Organizer -->
-        <div class="reviewer-category">
-            <div class="category-title">Organizer</div>
-            <div class="reviewer-list">
+        <div class="publication-year">
+            <div class="year">Organizer</div>
+            <div class="publications">
                 <ul>
                     <li><strong>Human and AI in Cybersecurity Learning (HACL) Workshop</strong> - 2024, Melbourne, Australia</li>
                 </ul>
@@ -373,9 +82,9 @@
         <div class="horizontal-line"></div>
 
         <!-- Volunteer -->
-        <div class="reviewer-category">
-            <div class="category-title">Volunteer</div>
-            <div class="reviewer-list">
+        <div class="publication-year">
+            <div class="year">Volunteer</div>
+            <div class="publications">
                 <ul>
                     <li><strong>The Genetic and Evolutionary Computation Conference</strong> (GECCO'22, GECCO'23)</li>
                 </ul>
@@ -391,5 +100,20 @@
     <footer>
         <p>© 2025 Diksha Goel. All rights reserved.</p>
     </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript for Back-to-Top Visibility -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
