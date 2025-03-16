@@ -3,388 +3,168 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diksha Goel - Publications</title>
+    <title>Diksha Goel | Publications</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Georgia', serif;
-            margin: 0;
-            background-color: #1a1a1a;
-            color: #e0e0e0;
-        }
-
-        .header, .container {
-            width: 100%;
-        }
-
-        .title-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #2c2c2c;
-            padding: 10px 20px;
-            color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-        }
-
-        .title-bar h4 {
-            margin: 0;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 20px;
-        }
-
-        nav ul li a:hover {
-            background-color: #555;
-        }
-
-        .cover-title {
-            font-size: 36px;
-            text-align: center;
-            margin: 20px 0;
-            color: #ffcc00;
-        }
-
-        .publication-section {
-            background-color: #333;
-            padding: 20px;
-            margin: 20px auto;
-            border-radius: 8px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            width: 90%;
-            max-width: 1000px;
-            color: #e0e0e0;
-        }
-
-        .publication-year {
-            display: flex;
-            align-items: center;
-            padding: 10px 0;
-        }
-
-        .year {
-            font-size: 24px;
-            color: #ffcc00;
-            width: 100px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .publications {
-            flex-grow: 1;
-            padding-left: 20px;
-        }
-
-        .publication {
-            margin: 15px 0; /* Add space between publications */
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .publication::before {
-            content: '•'; /* Custom bullet */
-            color: #ffcc00;
-            font-size: 20px;
-            margin-right: 10px;
-            line-height: 1.2; /* Align bullet with text */
-        }
-
-        ul {
-            padding-left: 0;
-            list-style-type: none; /* Remove default bullets */
-        }
-
-        a {
-            color: #ffcc00;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .horizontal-line {
-            width: 100%;
-            height: 4px;
-            background-color: #ffcc00;
-            margin: 20px 0;
-        }
-
-        .highlight {
-            color: #ffcc00; /* Mustard/Yellow color */
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="title-bar">
-        <h4>Diksha Goel</h4>
-                <nav>
-        <ul>
-        <li><a href="/index.html">About Me</a></li>
-        <li><a href="/Publications/">Publications</a></li>
-        <li><a href="/Projects/">Projects</a></li>
-        <li><a href="/Experience/">Experience</a></li>
-        <li><a href="/Reviewer/">Reviewer</a></li>
-        <li><a href="/News/">News</a></li>
-        <li><a href="/Awards/">Awards</a></li>
-        <li><a href="/Media/">Media</a></li>
-        <li><a href="/Contact/" class="active">Contact</a></li>
-        </ul>
-    </nav>
-    </div>
-    <div class="cover-photo">
-        <div class="cover-text">
-           <h2 style="margin-bottom: 5px;">Publications</h2>
+    <!-- Navigation -->
+    <header class="title-bar sticky publications-active">
+        <h1 class="logo">Diksha Goel</h1>
+        <nav>
+            <ul>
+                <li><a href="/index.html">About Me</a></li>
+                <li><a href="/Publications/" class="active">Publications</a></li>
+                <li><a href="/Projects/">Projects</a></li>
+                <li><a href="/Experience/">Experience</a></li>
+                <li><a href="/Reviewer/">Reviewer</a></li>
+                <li><a href="/News/">News</a></li>
+                <li><a href="/Awards/">Awards</a></li>
+                <li><a href="/Media/">Media</a></li>
+                <li><a href="/Contact/">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Publications</h1>
         </div>
-    </div>
+    </section>
 
+    <!-- Publications Section -->
+    <section class="publication-section fade-in">
+        <center><h2>Publications</h2></center>
+        <p style="text-align: center; font-size: 18px; margin-bottom: 30px;">
+            For an updated list of publications, visit my 
+            <a href="https://scholar.google.com/citations?hl=en&user=USow104AAAAJ&view_op=list_works&sortby=pubdate">Google Scholar</a> profile.
+        </p>
 
-<div class="publication-section">
-
-<p style="text-align: center; font-size: 20px; font-style: italic;">
-    For an updated list of publications, visit  
-    <a href="https://scholar.google.com/citations?hl=en&user=USow104AAAAJ&view_op=list_works&sortby=pubdate" 
-       style="text-decoration: underline; color: #ffcc00;">
-       Google Scholar
-    </a>
-</p>
-
-
-        <!-- 2025 Publications -->
+        <!-- 2025 -->
         <div class="publication-year">
             <div class="year">2025</div>
             <div class="publications">
                 <ul>
-                    <li class="publication">
-                        <span>Minjune Kim, Jeff Wang, Kristen Moore, <span class="highlight">Diksha Goel</span>, Derui Wang, Ahmad Mohsin, Ahmed Ibrahim, Robin Ram Mohan Doss, Seyit Camtepe, Helge Janicke. 
-                        "CyberAlly: Leveraging LLMs and Knowledge Graphs to Empower Cyber Defenders." 
-                       ACM Web Conference 2025 (WWW'25) <span class="highlight">(CORE A*)</span>. To Appear.
-                        </span>
-                    </li>
-
-                    <li class="publication">
-                        <span>Derui Wang, Kristen Moore, <span class="highlight">Diksha Goel</span>, Minjune Kim, Gang Li, Yang Li, Robin Doss, Minhui Xue, Bo Li, Seyit Camtepe, Liming Zhu. 
-                        "CAMP in the Odyssey: Provably Robust Reinforcement Learning with Certified Radius Maximization." 
-                        USENIX Security 2025 <span class="highlight">(CORE A*)</span>
-                        <a href="https://arxiv.org/pdf/2501.17667" style="text-decoration: underline;">Link</a>
-                        </span>
-                    </li>
-
-
-                    <li class="publication">
-                        <span>Majid Abdulsatar, Hussain Ahmad, <span class="highlight">Diksha Goel</span>, Faheem Ullah.  
-                        "Towards Deep Learning Enabled Cybersecurity Risk Assessment for Microservice Architectures."  
-                        Cluster Computing, To Appear <span class="highlight">(Impact Factor: 3.6)</span>. 
-                        <a href="https://arxiv.org/pdf/2403.15169" style="text-decoration: underline;">Link</a>
-                        </span>
-                    </li>
-
-
+                    <li>Minjune Kim, Jeff Wang, Kristen Moore, <strong>Diksha Goel</strong>, et al. "CyberAlly: Leveraging LLMs and Knowledge Graphs to Empower Cyber Defenders." <em>ACM Web Conference 2025 (WWW'25)</em> <strong>(CORE A*)</strong>. To Appear.</li>
+                    <li>Derui Wang, Kristen Moore, <strong>Diksha Goel</strong>, et al. "CAMP in the Odyssey: Provably Robust Reinforcement Learning with Certified Radius Maximization." <em>USENIX Security 2025</em> <strong>(CORE A*)</strong>. <a href="https://arxiv.org/pdf/2501.17667">Link</a></li>
+                    <li>Majid Abdulsatar, Hussain Ahmad, <strong>Diksha Goel</strong>, Faheem Ullah. "Towards Deep Learning Enabled Cybersecurity Risk Assessment for Microservice Architectures." <em>Cluster Computing</em>, To Appear <strong>(Impact Factor: 3.6)</strong>. <a href="https://arxiv.org/pdf/2403.15169">Link</a></li>
                 </ul>
             </div>
         </div>
-
         <div class="horizontal-line"></div>
+
+        <!-- 2024 -->
         <div class="publication-year">
             <div class="year">2024</div>
             <div class="publications">
                 <ul>
-    <li class="publication">
-        <span><span class="highlight">Diksha Goel</span>, Kristen Moore, Mingyu Guo, Derek Wang, Minjune Kim, Seyit Camtepe. 
-        "Optimizing Cyber Defense in Dynamic Active Directories through Reinforcement Learning." 
-        ESORICS 2024  <span class="highlight">(CORE A, Top-tier Cyber Security Conference) </span>. 
-        <a href="https://link.springer.com/chapter/10.1007/978-3-031-70879-4_17" style="text-decoration: underline;">Link</a>
-        </span>
-    </li>
-    <li class="publication">
-        <span><span class="highlight">Diksha Goel</span>, Hong Shen, Hui Tian, Mingyu Guo. 
-        "Effective Graph-Neural-Network based Models for Discovering Structural Hole Spanners in Large-Scale and Diverse Networks." 
-        Expert Systems with Applications, 2024  <span class="highlight">(Impact Factor: 8.5)</span>. 
-        <a href="https://www.sciencedirect.com/science/article/pii/S0957417424005013" style="text-decoration: underline;">Link</a>
-        </span>
-    </li>
-    <li class="publication">
-        <span>Ankit Kumar Jain, Hariom Shukla, <span class="highlight">Diksha Goel</span>. 
-        "A Comprehensive Survey on DDoS Detection, Mitigation, and Defense Strategies in Software-Defined Networks." 
-        Cluster Computing, 2024  <span class="highlight">(Impact Factor: 4.4)</span>.
-        <a href="https://link.springer.com/article/10.1007/s10586-024-04596-z" style="text-decoration: underline;">Link</a>
-        </span>
-    </li>
-    <li class="publication">
-        <span>Mingyu Guo, <span class="highlight">Diksha Goel</span>, Guanhua Wang, Runqi Guo, Yuko Sakurai, Muhammad Ali Babar. 
-        "Mechanism Design for Public Projects via Three Machine Learning Based Approaches." 
-        Autonomous Agents and Multi-Agent Systems, 2024  <span class="highlight">(Impact Factor: 2.5, CORE A)</span>.
-        <a href="https://link.springer.com/article/10.1007/s10458-024-09647-8" style="text-decoration: underline;">Link</a>
-        </span>
-    </li>
+                    <li><strong>Diksha Goel</strong>, Kristen Moore, Mingyu Guo, et al. "Optimizing Cyber Defense in Dynamic Active Directories through Reinforcement Learning." <em>ESORICS 2024</em> <strong>(CORE A)</strong>. <a href="https://link.springer.com/chapter/10.1007/978-3-031-70879-4_17">Link</a></li>
+                    <li><strong>Diksha Goel</strong>, Hong Shen, Hui Tian, Mingyu Guo. "Effective Graph-Neural-Network based Models for Discovering Structural Hole Spanners in Large-Scale and Diverse Networks." <em>Expert Systems with Applications</em>, 2024 <strong>(Impact Factor: 8.5)</strong>. <a href="https://www.sciencedirect.com/science/article/pii/S0957417424005013">Link</a></li>
+                    <li>Ankit Kumar Jain, Hariom Shukla, <strong>Diksha Goel</strong>. "A Comprehensive Survey on DDoS Detection, Mitigation, and Defense Strategies in Software-Defined Networks." <em>Cluster Computing</em>, 2024 <strong>(Impact Factor: 4.4)</strong>. <a href="https://link.springer.com/article/10.1007/s10586-024-04596-z">Link</a></li>
+                    <li>Mingyu Guo, <strong>Diksha Goel</strong>, Guanhua Wang, et al. "Mechanism Design for Public Projects via Three Machine Learning Based Approaches." <em>Autonomous Agents and Multi-Agent Systems</em>, 2024 <strong>(Impact Factor: 2.5, CORE A)</strong>. <a href="https://link.springer.com/article/10.1007/s10458-024-09647-8">Link</a></li>
+                    <li><strong>Diksha Goel</strong>, Max Ward, Aneta Neumann, et al. "Hardening Active Directory Graphs via Evolutionary Diversity Optimization based Policies." <em>ACM Transactions on Evolutionary Learning and Optimization</em>, 2024. <a href="https://dl.acm.org/doi/pdf/10.1145/3688401">Link</a></li>
+                    <li>Raveen Kanishka Jayalath, Hussain Ahmad, <strong>Diksha Goel</strong>, et al. "Microservice Vulnerability Analysis: A Literature Review with Empirical Insights." <em>IEEE Access</em>, 2024 <strong>(Impact Factor: 3.4)</strong>. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10720020">Link</a></li>
+                    <li>Ankit Kumar Jain, Hariom Shukla, <strong>Diksha Goel</strong>. "S-Defender: A Smishing Detection Approach in Mobile Environment." <em>International Conference on Cyber Warfare, Security and Space Computing</em>, Pages 68-78. <a href="https://link.springer.com/chapter/10.1007/978-3-031-73494-6_4">Link</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="horizontal-line"></div>
 
-    <li class="publication">
-        <span><span class="highlight">Diksha Goel</span>, Max Ward, Aneta Neumann, Frank Neumann, Hung Nguyen, Mingyu Guo. 
-        "Hardening Active Directory Graphs via Evolutionary Diversity Optimization based Policies." 
-        <i>ACM Transactions on Evolutionary Learning and Optimization</i>, 2024. 
-        <a href="https://dl.acm.org/doi/pdf/10.1145/3688401" style="text-decoration: underline;">Link</a>
-        </span>
-    </li>
+        <!-- 2023 -->
+        <div class="publication-year">
+            <div class="year">2023</div>
+            <div class="publications">
+                <ul>
+                    <li><strong>Diksha Goel</strong>, Aneta Neumann, Frank Neumann, et al. "Evolving Reinforcement Learning Environment to Minimize Learner’s Achievable Reward: An Application on Hardening Active Directory Systems." <em>GECCO 2023</em> <strong>(CORE A)</strong>. <a href="https://dl.acm.org/doi/pdf/10.1145/3583131.3590436">Link</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="horizontal-line"></div>
 
- <li class="publication">
-                        <span>Raveen Kanishka Jayalath, Hussain Ahmad, <span class="highlight">Diksha Goel</span>, Muhammad Shuja Syed, Faheem Ullah. 
-                        "Microservice Vulnerability Analysis: A Literature Review with Empirical Insights." 
-                        IEEE Access 2024  <span class="highlight">(Impact Factor: 3.4)</span>. 
-                        <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10720020" style="text-decoration: underline;">Link</a>
-                        </span>
-                    </li>
+        <!-- 2022 -->
+        <div class="publication-year">
+            <div class="year">2022</div>
+            <div class="publications">
+                <ul>
+                    <li><strong>Diksha Goel</strong>, Max Hector Ward-Graham, Aneta Neumann, et al. "Defending Active Directory by Combining Neural Network Based Dynamic Program and Evolutionary Diversity Optimisation." <em>GECCO 2022, Boston, MA, USA</em> <strong>(CORE A)</strong>. <a href="https://dl.acm.org/doi/pdf/10.1145/3512290.3528729">Link</a></li>
+                    <li><strong>Diksha Goel</strong>, Hong Shen, Hui Tian, Mingyu Guo. "Discovering Structural Hole Spanners in Dynamic Networks via Graph Neural Networks." <em>WI-IAT 2022, Niagara Falls, Canada</em> <strong>(CORE B)</strong>. <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10102045">Link</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="horizontal-line"></div>
 
-                    <li class="publication">
-                        <span>Ankit Kumar Jain, Hariom Shukla, <span class="highlight">Diksha Goel</span>.  
-                        "S-Defender: A Smishing Detection Approach in Mobile Environment."  
-                        International Conference on Cyber Warfare, Security and Space Computing, Pages 68-78.  
-                        <a href="https://link.springer.com/chapter/10.1007/978-3-031-73494-6_4" style="text-decoration: underline;">Link</a>
-                        </span>
-                    </li>
+        <!-- 2021 -->
+        <div class="publication-year">
+            <div class="year">2021</div>
+            <div class="publications">
+                <ul>
+                    <li><strong>Diksha Goel</strong>, Hong Shen, Hui Tian, Mingyu Guo. "Maintenance of Structural Hole Spanners in Dynamic Networks." <em>LCN 2021, Edmonton, AB, Canada</em> <strong>(CORE A)</strong>. <a href="https://ieeexplore.ieee.org/document/9524948/">Link</a></li>
+                    <li>Deepa Joshi, Vidyanand Mishra, Honey Srivastav, <strong>Diksha Goel</strong>. "Progressive Transfer Learning Approach for Identifying the Leaf Type by Optimising Network Parameters." <em>Neural Processing Letters</em>, Volume 53, Issue 5, Pages 3653-3676, 2021 <strong>(Impact Factor: 2.5)</strong>. <a href="https://link.springer.com/article/10.1007/s11063-021-10521-x">Link</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="horizontal-line"></div>
 
-</ul>
+        <!-- 2020 -->
+        <div class="publication-year">
+            <div class="year">2020</div>
+            <div class="publications">
+                <ul>
+                    <li>Ankit Kumar Jain, <strong>Diksha Goel</strong>, Sanjli Agarwal, et al. "Predicting spam messages using back propagation neural network." <em>Wireless Personal Communications</em>, Volume 110, Issue 1, Pages 403-422, 2020 <strong>(Impact Factor: 2.01)</strong>. <a href="https://link.springer.com/article/10.1007/s11277-019-06734-y">Link</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="horizontal-line"></div>
 
-</div>
-</div>
-<div class="horizontal-line"></div>
-<div class="publication-year">
-    <div class="year">2023</div>
-    <div class="publications">
-        <ul>
-    <li class="publication">
-        <span><span class="highlight">Diksha Goel</span>, Aneta Neumann, Frank Neumann, Hung Nguyen, Mingyu Guo. 
-        "Evolving Reinforcement Learning Environment to Minimize Learner’s Achievable Reward: An Application on Hardening Active Directory Systems." 
-        GECCO 2023  <span class="highlight">(CORE A)</span>.
-        <a href="https://dl.acm.org/doi/pdf/10.1145/3583131.3590436" style="text-decoration: underline;">Link</a>
-        </span>
-    </li>
-</ul>
-</div>
-</div>
-<div class="horizontal-line"></div>
-<div class="publication-year">
-    <div class="year">2022</div>
-    <div class="publications">
-        <ul>
-            <li class="publication">
-                <span><span class="highlight">Diksha Goel</span>, Max Hector Ward-Graham, Aneta Neumann, Frank Neumann, Hung Nguyen, Mingyu Guo. 
-                "Defending Active Directory by Combining Neural Network Based Dynamic Program and Evolutionary Diversity Optimisation." 
-                GECCO 2022, Boston, MA, USA  <span class="highlight">(CORE  A)</span>.
-                <a href="https://dl.acm.org/doi/pdf/10.1145/3512290.3528729" style="text-decoration: underline;">Link</a>
-                </span>
-            </li>
-            <li class="publication">
-                <span><span class="highlight">Diksha Goel</span>, Hong Shen, Hui Tian, Mingyu Guo. 
-                "Discovering Structural Hole Spanners in Dynamic Networks via Graph Neural Networks." 
-                WI-IAT 2022, Niagara Falls, Canada  <span class="highlight">(CORE  B)</span>.
-                <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10102045" style="text-decoration: underline;">Link</a>
-                </span>
-            </li>
-        </ul>
-    </div>
-</div>
+        <!-- 2019 -->
+        <div class="publication-year">
+            <div class="year">2019</div>
+            <div class="publications">
+                <ul>
+                    <li><strong>Diksha Goel</strong>, Megha Quamara. "Role-Based Authorization and Authentication Framework for Remote Service Access by In-Vehicle Users." <em>ICDSMLA 2019, Springer, Singapore</em>. <a href="https://link.springer.com/chapter/10.1007/978-981-15-1420-3_82">Link</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="horizontal-line"></div>
 
-<div class="horizontal-line"></div>
-<div class="publication-year">
-    <div class="year">2021</div>
-    <div class="publications">
-        <ul>
-            <li class="publication">
-                <span><span class="highlight">Diksha Goel</span>, Hong Shen, Hui Tian, Mingyu Guo. 
-                "Maintenance of Structural Hole Spanners in Dynamic Networks." 
-                LCN 2021, Edmonton, AB, Canada  <span class="highlight">(CORE A)</span>.
-                <a href="https://ieeexplore.ieee.org/document/9524948/" style="text-decoration: underline;">Link</a>
-                </span>
-            </li>
-            <li class="publication">
-                <span>Deepa Joshi, Vidyanand Mishra, Honey Srivastav, <span class="highlight">Diksha Goel</span>. 
-                "Progressive Transfer Learning Approach for Identifying the Leaf Type by Optimising Network Parameters." 
-                Neural Processing Letters, Volume 53, Issue 5, Pages 3653-3676, 2021  <span class="highlight">(Impact Factor: 2.5)</span>. 
-                <a href="https://link.springer.com/article/10.1007/s11063-021-10521-x" style="text-decoration: underline;">Link</a>
-                </span>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="horizontal-line"></div>
-<div class="publication-year">
-    <div class="year">2020</div>
-    <div class="publications">
-        <ul>
-            <li class="publication">
-                <span>Ankit Kumar Jain, <span class="highlight">Diksha Goel</span>, Sanjli Agarwal, Yukta Singh, Gaurav Bajaj. 
-                "Predicting spam messages using back propagation neural network." 
-                Wireless Personal Communications, Volume 110, Issue 1, Pages 403-422, 2020  <span class="highlight">(Impact Factor: 2.01)</span>.
-                <a href="https://link.springer.com/article/10.1007/s11277-019-06734-y" style="text-decoration: underline;">Link</a>
-                </span>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="horizontal-line"></div>
-<div class="publication-year">
-    <div class="year">2019</div>
-    <div class="publications">
-        <ul>
-            <li class="publication">
-                <span><span class="highlight">Diksha Goel</span>, Megha Quamara. 
-                "Role-Based Authorization and Authentication Framework for Remote Service Access by In-Vehicle Users." 
-                ICDSMLA 2019, Springer, Singapore. 
-                <a href="https://link.springer.com/chapter/10.1007/978-981-15-1420-3_82" style="text-decoration: underline;">Link</a>
-                </span>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="horizontal-line"></div>
-<div class="publication-year">
-    <div class="year">2018</div>
-    <div class="publications">
-        <ul>
-            <li class="publication">
-                <span><span class="highlight">Diksha Goel</span>, Ankit Kumar Jain. 
-                "Mobile phishing attacks and defence mechanisms: State of art and open research challenges." 
-                Computers & Security, Volume 73, Pages 519-544, 2018  <span class="highlight">(Impact Factor: 5.1, CORE B)</span>. 
-                <a href="https://www.sciencedirect.com/science/article/pii/S0167404817302717" style="text-decoration: underline;">Link</a>
-                </span>
-            </li>
-            <li class="publication">
-                <span><span class="highlight">Diksha Goel</span>, Ankit Kumar Jain. 
-                "Smishing-classifier: a novel framework for detection of smishing attack in mobile environment." 
-                NGCT 2018, Springer, Singapore. 
-                <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=USow104AAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=USow104AAAAJ:d1gkVwhDpl0C" style="text-decoration: underline;">Link</a>
-                </span>
-            </li>
-            <li class="publication">
-                <span><span class="highlight">Diksha Goel</span>, Ankit Kumar Jain. 
-                "Overview of smartphone security: Attack and defence techniques." 
-                Computer and Cyber Security, Volume 4, Pages 249-281, 2018. 
-                <a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9780429424878-10/overview-smartphone-security-attack-defense-techniques-diksha-goel-ankit-kumar-jain" style="text-decoration: underline;">Link</a>
-                </span>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="horizontal-line"></div>
+        <!-- 2018 -->
+        <div class="publication-year">
+            <div class="year">2018</div>
+            <div class="publications">
+                <ul>
+                    <li><strong>Diksha Goel</strong>, Ankit Kumar Jain. "Mobile phishing attacks and defence mechanisms: State of art and open research challenges." <em>Computers & Security</em>, Volume 73, Pages 519-544, 2018 <strong>(Impact Factor: 5.1, CORE B)</strong>. <a href="https://www.sciencedirect.com/science/article/pii/S0167404817302717">Link</a></li>
+                    <li><strong>Diksha Goel</strong>, Ankit Kumar Jain. "Smishing-classifier: a novel framework for detection of smishing attack in mobile environment." <em>NGCT 2018, Springer, Singapore</em>. <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=USow104AAAAJ&cstart=20&pagesize=80&sortby=pubdate&citation_for_view=USow104AAAAJ:d1gkVwhDpl0C">Link</a></li>
+                    <li><strong>Diksha Goel</strong>, Ankit Kumar Jain. "Overview of smartphone security: Attack and defence techniques." <em>Computer and Cyber Security</em>, Volume 4, Pages 249-281, 2018. <a href="https://www.taylorfrancis.com/chapters/edit/10.1201/9780429424878-10/overview-smartphone-security-attack-defense-techniques-diksha-goel-ankit-kumar-jain">Link</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="horizontal-line"></div>
+    </section>
 
+    <!-- Divider -->
+    <div class="section-divider"></div>
 
-        <!-- Additional years and publications can follow the same structure -->
-    </div>
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Diksha Goel. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript for Back-to-Top Visibility -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
