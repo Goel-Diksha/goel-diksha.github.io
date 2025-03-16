@@ -3,90 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diksha Goel - Awards & Achievements</title>
+    <title>Diksha Goel | Awards & Achievements</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Awards Section Styling */
-        .awards-section {
-            background-color: #2a2a2a;
-            border-radius: 8px;
-            padding: 40px 20px;
-            margin: 20px auto;
-            max-width: 1000px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-            color: #e0e0e0;
-        }
-
-        .awards-heading {
-            text-align: center;
-            color: #ffcc00;
-            font-size: 32px;
-            margin-bottom: 20px;
-        }
-
-        .award-item {
-            margin-bottom: 15px;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #e0e0e0;
-        }
-
-        .award-item b {
-            color: #ffcc00;
-        }
-
-        @media (max-width: 768px) {
-            .awards-section {
-                padding: 20px;
-            }
-            .award-item {
-                font-size: 16px;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Title Bar -->
-    <div class="title-bar">
-        <h4>Diksha Goel</h4>
+    <!-- Navigation -->
+    <header class="title-bar sticky awards-active">
+        <h1 class="logo">Diksha Goel</h1>
         <nav>
             <ul>
-        <li><a href="/index.html">About Me</a></li>
-        <li><a href="/Publications/">Publications</a></li>
-        <li><a href="/Projects/">Projects</a></li>
-        <li><a href="/Experience/">Experience</a></li>
-        <li><a href="/Reviewer/">Reviewer</a></li>
-        <li><a href="/News/">News</a></li>
-        <li><a href="/Awards/">Awards</a></li>
-        <li><a href="/Media/">Media</a></li>
-        <li><a href="/Contact/" class="active">Contact</a></li>
+                <li><a href="/index.html">About Me</a></li>
+                <li><a href="/Publications/">Publications</a></li>
+                <li><a href="/Projects/">Projects</a></li>
+                <li><a href="/Experience/">Experience</a></li>
+                <li><a href="/Reviewer/">Reviewer</a></li>
+                <li><a href="/News/">News</a></li>
+                <li><a href="/Awards/" class="active">Awards</a></li>
+                <li><a href="/Media/">Media</a></li>
+                <li><a href="/Contact/">Contact</a></li>
             </ul>
         </nav>
-    </div>
+    </header>
 
-    <!-- Cover Photo -->
-    <div class="cover-photo">
-        <div class="cover-text">
-            <h2 style="margin-bottom: 5px;">Awards & Achievements</h2>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Awards & Achievements</h1>
         </div>
-    </div>
+    </section>
 
     <!-- Awards Section -->
-    <div class="awards-section">
-        <h2 class="awards-heading">Awards & Achievements</h2>
-        <p class="award-item"><b>2024:</b> Received Google Cloud Research Grant for Cybersecurity research.</p>
-        <p class="award-item"><b>2023:</b> Awarded GECCO Conference Travel Grant to present research paper at Lisbon, Portugal.</p>
-        <p class="award-item"><b>2022:</b> Awarded ACM Travel Grant to present at GECCO Conference in Boston, USA.</p>
+    <section class="awards-section fade-in">
+        <h2>A Journey of Excellence</h2>
+        <div class="awards-list">
+            <div class="award-item" data-prestige="gold">
+                <div class="award-badge"><i class="fas fa-trophy"></i></div>
+                <div class="award-details">
+                    <h3>Google Cloud Research Grant</h3>
+                    <p>2024 - Awarded for outstanding contributions to Cybersecurity research.</p>
+                </div>
+            </div>
 
-        <p class="award-item"><b>2020:</b> Awarded Women in Machine Learning Grant to attend and present at prestigious conferences.</p>
-        <p class="award-item"><b>2019:</b> Secured Adelaide Scholarship International for PhD studies at the University of Adelaide.</p>
+            <div class="award-item">
+                <div class="award-badge"><i class="fas fa-plane-departure"></i></div>
+                <div class="award-details">
+                    <h3>GECCO Conference Travel Grant</h3>
+                    <p>2023 - Received to present research paper at GECCO Conference in Lisbon, Portugal.</p>
+                </div>
+            </div>
 
-      <p class="award-item"><b>2019:</b> Offered full scholarships from UNSW for pursuing PhD studies.</p>
-      <p class="award-item"><b>2019:</b> Offered full scholarships from Monash University for pursuing PhD degree.</p>
-      <p class="award-item"><b>2018:</b> Awarded full scholarship for postgraduate Master’s studies.</p>
+            <div class="award-item">
+                <div class="award-badge"><i class="fas fa-plane-departure"></i></div>
+                <div class="award-details">
+                    <h3>ACM Travel Grant</h3>
+                    <p>2022 - Awarded to present at GECCO Conference in Boston, USA.</p>
+                </div>
+            </div>
 
+            <div class="award-item">
+                <div class="award-badge"><i class="fas fa-users"></i></div>
+                <div class="award-details">
+                    <h3>Women in Machine Learning Grant</h3>
+                    <p>2020 - Received to attend and present at prestigious conferences.</p>
+                </div>
+            </div>
 
-    </div>
+            <div class="award-item" data-prestige="gold">
+                <div class="award-badge"><i class="fas fa-graduation-cap"></i></div>
+                <div class="award-details">
+                    <h3>Adelaide Scholarship International</h3>
+                    <p>2019 - Secured for PhD studies at the University of Adelaide.</p>
+                </div>
+            </div>
 
+            <div class="award-item">
+                <div class="award-badge"><i class="fas fa-graduation-cap"></i></div>
+                <div class="award-details">
+                    <h3>UNSW PhD Scholarship</h3>
+                    <p>2019 - Offered full scholarship for pursuing PhD studies at UNSW.</p>
+                </div>
+            </div>
+
+            <div class="award-item">
+                <div class="award-badge"><i class="fas fa-graduation-cap"></i></div>
+                <div class="award-details">
+                    <h3>Monash University PhD Scholarship</h3>
+                    <p>2019 - Offered full scholarship for pursuing PhD degree at Monash University.</p>
+                </div>
+            </div>
+
+            <div class="award-item">
+                <div class="award-badge"><i class="fas fa-graduation-cap"></i></div>
+                <div class="award-details">
+                    <h3>Postgraduate Master’s Scholarship</h3>
+                    <p>2018 - Awarded full scholarship for postgraduate Master’s studies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Diksha Goel. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript for Back-to-Top Visibility -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+    </script>
 </body>
 </html>
