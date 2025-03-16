@@ -1,234 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diksha Goel - Experience</title>
+    <title>Diksha Goel | Experience</title>
     <link rel="stylesheet" href="styles.css">
-    <style>
-        body {
-            font-family: 'Georgia', serif;
-            margin: 0;
-            background-color: #1a1a1a;
-            color: #e0e0e0;
-        }
-
-        .title-bar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #2c2c2c;
-            padding: 10px 20px;
-            color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .title-bar h4 {
-            margin: 0;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 20px;
-        }
-
-        nav ul li a:hover {
-            background-color: #555;
-        }
-
-        .cover-photo {
-            height: 270px;
-            background: url('cover.jpg') no-repeat center center;
-            background-size: cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 36px;
-            color: #fff;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-        }
-
-        .cover-text h2, .cover-text h3 {
-            margin: 0;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            margin: 40px auto;
-            padding: 20px;
-            max-width: 1000px;
-        }
-
-        .experience-section {
-            background-color: #2a2a2a;
-            padding: 40px 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            width: 100%;
-        }
-
-        .section-heading {
-            color: #ffcc00;
-            text-align: center;
-            font-size: 32px;
-            margin-bottom: 40px;
-        }
-
-        .timeline {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .timeline-item {
-            display: flex;
-            align-items: center;
-            padding: 20px;
-            background-color: #333;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            width: 90%;
-        }
-
-        .timeline-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-        }
-
-        .timeline-logo {
-            width: 50px;
-            height: 50px;
-            margin-right: 20px;
-            flex-shrink: 0;
-        }
-
-        .timeline-content {
-            text-align: left;
-        }
-
-        .timeline-content p {
-            margin: 5px 0;
-            line-height: 1.6;
-            color: #e0e0e0;
-        }
-
-        .timeline-title {
-            font-size: 20px;
-            color: #ffcc00;
-            margin: 5px 0;
-        }
-
-        .timeline-company a {
-            color: #ffcc00;
-            text-decoration: none;
-        }
-
-        .timeline-company a:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 768px) {
-            .timeline-item {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
-            .timeline-logo {
-                margin-right: 0;
-                margin-bottom: 15px;
-            }
-
-            .timeline-content {
-                text-align: center;
-            }
-        }
-    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
-    <!-- Title Bar -->
-    <div class="title-bar">
-        <h4>Diksha Goel</h4>
+    <!-- Navigation -->
+    <header class="title-bar sticky experience-active">
+        <h1 class="logo">Diksha Goel</h1>
         <nav>
             <ul>
-        <li><a href="/index.html">About Me</a></li>
-        <li><a href="/Publications/">Publications</a></li>
-        <li><a href="/Projects/">Projects</a></li>
-        <li><a href="/Experience/">Experience</a></li>
-        <li><a href="/Reviewer/">Reviewer</a></li>
-        <li><a href="/News/">News</a></li>
-        <li><a href="/Awards/">Awards</a></li>
-        <li><a href="/Media/">Media</a></li>
-        <li><a href="/Contact/" class="active">Contact</a></li>
+                <li><a href="/index.html">About Me</a></li>
+                <li><a href="/Publications/">Publications</a></li>
+                <li><a href="/Projects/">Projects</a></li>
+                <li><a href="/Experience/" class="active">Experience</a></li>
+                <li><a href="/Reviewer/">Reviewer</a></li>
+                <li><a href="/News/">News</a></li>
+                <li><a href="/Awards/">Awards</a></li>
+                <li><a href="/Media/">Media</a></li>
+                <li><a href="/Contact/">Contact</a></li>
             </ul>
         </nav>
-    </div>
+    </header>
 
-<div class="cover-photo">
-        <div class="cover-text">
-           <h2 style="margin-bottom: 5px;">Experience</h2>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Experience</h1>
         </div>
-    </div>
+    </section>
 
-    <!-- Main Content -->
-    <div class="container">
-        <div class="experience-section">
-            <div class="timeline">
-                <!-- Item 1 -->
-                <div class="timeline-item">
-                    <img src="CSIRO_Logo.png" alt="CSIRO Logo" class="timeline-logo">
-                    <div class="timeline-content">
-                        <p>2024 - Present</p>
-                        <h3 class="timeline-title">Research Scientist</h3>
-                        <p class="timeline-company">
-                            <a href="https://www.csiro.au/en/research/technology-space?start=0&count=12" target="_blank">CSIRO's Data61</a>, Melbourne, Australia
-                        </p>
-                    </div>
+    <!-- Experience Section -->
+    <section class="experience-section fade-in">
+        <center><h2>My Experience</h2></center>
+        <div class="timeline">
+            <!-- Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="timeline-content">
+                    <p>2024 - Present</p>
+                    <h3 class="timeline-title">Research Scientist</h3>
+                    <p class="timeline-company">
+                        <a href="https://www.csiro.au/en/research/technology-space?start=0&count=12" target="_blank">CSIRO's Data61</a>, Melbourne, Australia
+                    </p>
                 </div>
+            </div>
 
-                <!-- Item 2 -->
-                <div class="timeline-item">
-                    <img src="CSIRO_Logo.png" alt="CSIRO Logo" class="timeline-logo">
-                    <div class="timeline-content">
-                        <p>2023 - 2024</p>
-                        <h3 class="timeline-title">Postdoctoral Research Fellow</h3>
-                        <p class="timeline-company">
-                            <a href="https://www.csiro.au/en/research/technology-space?start=0&count=12" target="_blank">CSIRO's Data61</a>, Melbourne, Australia
-                        </p>
-                    </div>
+            <!-- Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="timeline-content">
+                    <p>2023 - 2024</p>
+                    <h3 class="timeline-title">Postdoctoral Research Fellow</h3>
+                    <p class="timeline-company">
+                        <a href="https://www.csiro.au/en/research/technology-space?start=0&count=12" target="_blank">CSIRO's Data61</a>, Melbourne, Australia
+                    </p>
                 </div>
+            </div>
 
-                <!-- Item 3 -->
-                <div class="timeline-item">
-                    <img src="upes.jpg" alt="UPES Logo" class="timeline-logo">
-                    <div class="timeline-content">
-                        <p>2018 - 2019</p>
-                        <h3 class="timeline-title">Assistant Professor</h3>
-                        <p class="timeline-company">
-                            <a href="https://www.upes.ac.in/" target="_blank">UPES</a>, Dehradun, India
-                        </p>
-                    </div>
+            <!-- Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="timeline-content">
+                    <p>2018 - 2019</p>
+                    <h3 class="timeline-title">Assistant Professor</h3>
+                    <p class="timeline-company">
+                        <a href="https://www.upes.ac.in/" target="_blank">UPES</a>, Dehradun, India
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
-</body>
+    </section>
 
+    <!-- Divider -->
+    <div class="section-divider"></div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Diksha Goel. All rights reserved.</p>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- JavaScript for Back-to-Top and Scroll Animations -->
+    <script>
+        window.addEventListener('scroll', () => {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+
+            // Trigger fade-in animations for timeline items
+            document.querySelectorAll('.timeline-item').forEach(item => {
+                const rect = item.getBoundingClientRect();
+                if (rect.top <= window.innerHeight * 0.8) {
+                    item.classList.add('visible');
+                }
+            });
+        });
+    </script>
+</body>
 </html>
