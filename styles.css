@@ -9,7 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #F5F7FA;
     color: #2A3A54;
-    line-height: 1.6;
+    line-height: 1.5; /* Slightly reduced from 1.6 */
     overflow-x: hidden;
 }
 
@@ -21,8 +21,8 @@ body {
     justify-content: space-between;
     align-items: center;
     background-color: #FFFFFF;
-    padding: 15px 40px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 3px 30px; /* Reduced from 5px 40px */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Slightly smaller shadow */
     z-index: 1000;
     transition: background-color 0.3s;
 }
@@ -47,10 +47,10 @@ body {
 
 .logo {
     font-family: 'Poppins', sans-serif;
-    font-size: 28px;
+    font-size: 22px; /* Reduced from 24px */
     font-weight: 700;
     color: #2A3A54;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px; /* Reduced from 1px */
 }
 
 nav ul {
@@ -61,17 +61,21 @@ nav ul {
 nav ul li a {
     color: #2A3A54;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 3px 15px; /* Reduced from 5px 20px */
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
     transition: all 0.3s ease;
     position: relative;
-    font-size: 16px; /* Explicitly set to ensure consistency */
+    font-size: 13px; /* Reduced from 14px */
 }
 
-nav ul li a:hover,
+nav ul li a:hover {
+    color: #42A5F5;
+}
+
 nav ul li a.active {
-    color: #2A3A54;
+    color: #42A5F5;
+    font-weight: 600;
 }
 
 nav ul li a::after {
@@ -89,12 +93,13 @@ nav ul li a::after {
 nav ul li a:hover::after,
 nav ul li a.active::after {
     width: 50%;
+    background: #42A5F5;
 }
 
 /* Hero Section */
 .hero {
     position: relative;
-    height: 400px;
+    height: 250px; /* Reduced from 300px */
     background: linear-gradient(135deg, rgba(42, 58, 84, 0.8), rgba(66, 165, 245, 0.5)), url('cover.jpg') no-repeat center/cover;
     display: flex;
     align-items: center;
@@ -120,112 +125,114 @@ nav ul li a.active::after {
 
 .hero-content h1 {
     font-family: 'Poppins', sans-serif;
-    font-size: 56px;
+    font-size: 40px; /* Reduced from 48px */
     font-weight: 700;
     color: #FFFFFF;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    letter-spacing: 1px;
+    letter-spacing: 0.5px; /* Reduced from 1px */
 }
 
 .hero-content h3 {
-    font-size: 26px;
+    font-size: 18px; /* Reduced from 22px */
     font-weight: 300;
     color: #E0E0E0;
-    margin-top: 10px;
+    margin-top: 5px; /* Reduced from 8px */
 }
 
 /* Container */
 .container {
     display: flex;
     flex-wrap: wrap;
-    gap: 50px;
-    padding: 60px;
-    max-width: 1400px;
+    gap: 30px; /* Reduced from 50px */
+    padding: 40px; /* Reduced from 60px */
+    max-width: 1200px; /* Reduced from 1400px */
     margin: 0 auto;
     background: linear-gradient(135deg, #F5F7FA 0%, #EAF1FB 100%);
-    border-radius: 20px;
+    border-radius: 15px; /* Reduced from 20px */
 }
 
+/* Left Column */
 .left-column {
-    flex: 0 0 200px;
+    flex: 0 0 180px; /* Reduced from 200px */
     text-align: center;
 }
 
 .profile-photo {
-    width: 300px;
-    height: 300px;
+    width: 250px; /* Reduced from 300px */
+    height: 250px; /* Reduced from 300px */
     border-radius: 50%;
-    border: 5px solid #2A3A54;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    border: 4px solid #2A3A54; /* Reduced from 5px */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); /* Smaller shadow */
     transition: transform 0.3s ease;
-    margin-top: 170px;
-    margin-bottom: 20px;
+    margin-top: 120px; /* Reduced from 170px */
+    margin-bottom: 15px; /* Reduced from 20px */
 }
 
 .profile-photo:hover {
-    transform: scale(1.2);
+    transform: scale(1.1); /* Reduced from 1.2 */
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px; /* Reduced from 15px */
 }
 
 .social-icon {
+    width: 35px; /* Reduced from 40px */
+    height: 35px; /* Reduced from 40px */
+    background: #FFFFFF;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Smaller shadow */
+    transition: all 0.3s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: #FFFFFF;
-    border-radius: 50%;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
 }
 
 .social-icon i {
-    font-size: 20px;
+    font-size: 18px; /* Reduced from 20px */
     color: #2A3A54;
 }
 
 .social-icon:hover {
     background: #42A5F5;
-    transform: translateY(-5px);
+    transform: translateY(-3px); /* Reduced from -5px */
 }
 
 .social-icon:hover i {
     color: #FFFFFF;
 }
 
+/* Right Column */
 .right-column {
     flex: 1;
-    padding: 40px;
+    padding: 20px; /* Reduced from 40px */
 }
 
 /* Headings */
 h2 {
     font-family: 'Poppins', sans-serif;
     color: #2A3A54;
-    font-size: 36px;
-    margin-bottom: 25px;
+    font-size: 30px; /* Reduced from 36px */
+    margin-bottom: 15px; /* Reduced from 25px */
     position: relative;
 }
 
 h2::after {
     content: '';
-    width: 60px;
-    height: 4px;
+    width: 50px; /* Reduced from 60px */
+    height: 3px; /* Reduced from 4px */
     background: linear-gradient(to right, #2A3A54, #42A5F5);
     display: block;
-    margin-top: 10px;
+    margin-top: 5px; /* Reduced from 10px */
     border-radius: 2px;
 }
 
 p {
-    font-size: 18px;
+    font-size: 16px; /* Reduced from 18px */
     color: #2A3A54;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Reduced from 15px */
 }
 
 a {
@@ -243,11 +250,11 @@ a:hover {
 /* About Card */
 .about-card {
     background: #FFFFFF;
-    padding: 30px;
-    border-radius: 15px;
+    padding: 20px; /* Reduced from 30px */
+    border-radius: 10px; /* Reduced from 15px */
     border: 2px solid transparent;
     background-clip: padding-box;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Smaller shadow */
     position: relative;
 }
 
@@ -260,41 +267,41 @@ a:hover {
     bottom: -2px;
     background: linear-gradient(135deg, #42A5F5, #2A3A54);
     z-index: -1;
-    border-radius: 15px;
+    border-radius: 10px; /* Match reduced radius */
 }
 
 /* Section Divider */
 .section-divider {
     width: 100%;
-    height: 2px;
+    height: 1px; /* Reduced from 2px */
     background: linear-gradient(to right, transparent, #42A5F5, transparent);
-    margin: 5px 0;
+    margin: 3px 0; /* Reduced from 5px */
 }
 
 /* Research Section */
 .research-section {
-    max-width: 1400px;
-    margin: 50px auto;
-    padding: 40px;
+    max-width: 1200px; /* Reduced from 1400px */
+    margin: 30px auto; /* Reduced from 50px */
+    padding: 20px; /* Reduced from 40px */
     background: linear-gradient(135deg, #F5F7FA 0%, #EAF1FB 100%);
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px; /* Reduced from 15px */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Smaller shadow */
 }
 
 .research-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin: 30px 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Reduced from 300px */
+    gap: 20px; /* Reduced from 30px */
+    margin: 20px 0; /* Reduced from 30px */
 }
 
 .research-card {
     background: #FFFFFF;
-    padding: 30px;
-    border-radius: 15px;
+    padding: 20px; /* Reduced from 30px */
+    border-radius: 10px; /* Reduced from 15px */
     border: 2px solid transparent;
     background-clip: padding-box;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Smaller shadow */
     transition: all 0.3s ease;
     position: relative;
 }
@@ -308,29 +315,28 @@ a:hover {
     bottom: -2px;
     background: linear-gradient(135deg, #42A5F5, #2A3A54);
     z-index: -1;
-    border-radius: 15px;
-    transition: all 0.3s ease;
+    border-radius: 10px; /* Match reduced radius */
 }
 
 .research-card:hover {
-    transform: translateY(-10px) rotate(2deg);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px) rotate(2deg); /* Reduced from -10px */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Smaller shadow */
 }
 
 .research-icon {
+    width: 50px; /* Reduced from 60px */
+    height: 50px; /* Reduced from 60px */
+    background: linear-gradient(135deg, #42A5F5, #2A3A54);
+    border-radius: 50%;
+    margin: 0 auto 15px; /* Reduced from 20px */
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #42A5F5, #2A3A54);
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    transition: all 0.3s ease;
 }
 
 .research-icon i {
-    font-size: 30px;
+    font-size: 25px; /* Reduced from 30px */
     color: #FFFFFF;
 }
 
@@ -340,11 +346,11 @@ a:hover {
 
 .research-card h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 22px;
+    font-size: 20px; /* Reduced from 22px */
     font-weight: 600;
     color: #2A3A54;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduced from 20px */
 }
 
 .research-card ul {
@@ -353,12 +359,12 @@ a:hover {
 }
 
 .research-card ul li {
-    font-size: 18px;
+    font-size: 16px; /* Reduced from 18px */
     color: #2A3A54;
-    line-height: 1.8;
+    line-height: 1.6; /* Reduced from 1.8 */
     position: relative;
-    margin-bottom: 12px;
-    padding-left: 20px;
+    margin-bottom: 8px; /* Reduced from 12px */
+    padding-left: 15px; /* Reduced from 20px */
 }
 
 .research-card ul li::before {
@@ -366,33 +372,33 @@ a:hover {
     color: #42A5F5;
     position: absolute;
     left: 0;
-    font-size: 20px;
+    font-size: 18px; /* Reduced from 20px */
 }
 
 /* Education Section */
 .education-section {
-    max-width: 1400px;
-    margin: 50px auto;
-    padding: 40px;
+    max-width: 1200px; /* Reduced from 1400px */
+    margin: 30px auto; /* Reduced from 50px */
+    padding: 20px; /* Reduced from 40px */
     background: linear-gradient(135deg, #F5F7FA 0%, #EAF1FB 100%);
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 10px; /* Reduced from 15px */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Smaller shadow */
 }
 
 .education-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin: 30px 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Reduced from 300px */
+    gap: 20px; /* Reduced from 30px */
+    margin: 20px 0; /* Reduced from 30px */
 }
 
 .education-card {
     background: #FFFFFF;
-    padding: 30px;
-    border-radius: 15px;
+    padding: 20px; /* Reduced from 30px */
+    border-radius: 10px; /* Reduced from 15px */
     border: 2px solid transparent;
     background-clip: padding-box;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); /* Smaller shadow */
     transition: all 0.3s ease;
     position: relative;
 }
@@ -406,29 +412,28 @@ a:hover {
     bottom: -2px;
     background: linear-gradient(135deg, #42A5F5, #2A3A54);
     z-index: -1;
-    border-radius: 15px;
-    transition: all 0.3s ease;
+    border-radius: 10px; /* Match reduced radius */
 }
 
 .education-card:hover {
-    transform: translateY(-10px) rotate(2deg);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px) rotate(2deg); /* Reduced from -10px */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* Smaller shadow */
 }
 
 .education-icon {
+    width: 50px; /* Reduced from 60px */
+    height: 50px; /* Reduced from 60px */
+    background: linear-gradient(135deg, #42A5F5, #2A3A54);
+    border-radius: 50%;
+    margin: 0 auto 15px; /* Reduced from 20px */
+    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #42A5F5, #2A3A54);
-    border-radius: 50%;
-    margin: 0 auto 20px;
-    transition: all 0.3s ease;
 }
 
 .education-icon i {
-    font-size: 30px;
+    font-size: 25px; /* Reduced from 30px */
     color: #FFFFFF;
 }
 
@@ -438,18 +443,18 @@ a:hover {
 
 .education-card h3 {
     font-family: 'Poppins', sans-serif;
-    font-size: 22px;
+    font-size: 20px; /* Reduced from 22px */
     font-weight: 600;
     color: #2A3A54;
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 8px; /* Reduced from 10px */
 }
 
 .education-card h3.duration {
-    font-size: 18px;
+    font-size: 16px; /* Reduced from 18px */
     font-weight: 400;
     color: #4A5A74;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* Reduced from 15px */
 }
 
 .education-card ul {
@@ -458,12 +463,12 @@ a:hover {
 }
 
 .education-card ul li {
-    font-size: 18px;
+    font-size: 16px; /* Reduced from 18px */
     color: #2A3A54;
-    line-height: 1.5;
+    line-height: 1.4; /* Reduced from 1.5 */
     position: relative;
-    margin-bottom: 6px;
-    padding-left: 20px;
+    margin-bottom: 5px; /* Reduced from 6px */
+    padding-left: 15px; /* Reduced from 20px */
 }
 
 .education-card ul li::before {
@@ -475,49 +480,49 @@ a:hover {
     text-align: center;
     padding: 30px 0; /* Reduced from 50px */
     background: linear-gradient(135deg, #F5F7FA 0%, #EAF1FB 100%);
-    max-width: 400px; /* Set a smaller width for the container */
-    margin: 0 auto; /* Center the container */
+    max-width: 500px; /* Reduced from 600px */
+    margin: 0 auto;
 }
 
 .map-container img {
-    width: 100%; /* Ensure the map scales to fit the container */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%;
+    height: auto;
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 25px;
+    padding: 15px; /* Reduced from 25px */
     background: #FFFFFF;
     color: #2A3A54;
-    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
-    font-size: 16px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05); /* Smaller shadow */
+    font-size: 14px; /* Reduced from 16px */
 }
 
 /* Back to Top */
 .back-to-top {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 15px; /* Reduced from 20px */
+    right: 15px; /* Reduced from 20px */
     background: #2A3A54;
     color: #FFFFFF;
-    padding: 12px;
+    padding: 10px; /* Reduced from 12px */
     border-radius: 50%;
-    font-size: 22px;
+    font-size: 20px; /* Reduced from 22px */
     display: none;
     transition: all 0.3s ease;
 }
 
 .back-to-top:hover {
     background: #42A5F5;
-    transform: translateY(-5px);
+    transform: translateY(-3px); /* Reduced from -5px */
 }
 
 /* Animations */
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(15px); /* Reduced from 20px */
     }
     to {
         opacity: 1;
@@ -527,56 +532,52 @@ footer {
 
 .fade-in {
     opacity: 0;
-    animation: fadeInUp 0.8s ease forwards;
+    animation: fadeInUp 0.6s ease forwards; /* Reduced from 0.8s */
 }
 
-.fade-in:nth-child(1) { animation-delay: 0.2s; }
-.fade-in:nth-child(2) { animation-delay: 0.4s; }
-.fade-in:nth-child(3) { animation-delay: 0.6s; }
+.fade-in:nth-child(1) { animation-delay: 0.1s; } /* Reduced from 0.2s */
+.fade-in:nth-child(2) { animation-delay: 0.2s; } /* Reduced from 0.4s */
+.fade-in:nth-child(3) { animation-delay: 0.3s; } /* Reduced from 0.6s */
 
 /* Responsive */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
-        padding: 30px;
+        padding: 20px; /* Reduced from 30px */
     }
     .left-column {
         flex: 0 0 auto;
-        margin-bottom: 20px;
+        margin-bottom: 15px; /* Reduced from 20px */
     }
     .right-column {
-        padding: 30px;
+        padding: 15px; /* Reduced from 30px */
     }
     .title-bar {
         flex-direction: column;
-        padding: 10px 20px;
+        padding: 3px 15px; /* Reduced further */
     }
-    .nav ul {
+    nav ul {
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 10px;
+        margin-top: 3px; /* Reduced from 5px */
     }
-    .nav ul li a {
-        padding: 8px 12px;
+    nav ul li a {
+        padding: 3px 10px; /* Reduced further */
+        font-size: 12px; /* Reduced from 13px */
     }
     .hero {
-        height: 300px;
+        height: 200px; /* Reduced from 250px */
     }
     .hero-content h1 {
-        font-size: 40px;
+        font-size: 30px; /* Reduced from 36px */
     }
     .hero-content h3 {
-        font-size: 20px;
+        font-size: 16px; /* Reduced from 18px */
     }
-    .research-section,
-    .education-section {
-        padding: 30px;
+    .research-section, .education-section {
+        padding: 15px; /* Reduced from 30px */
     }
-    .research-card,
-    .education-card {
-        padding: 20px;
-    }
-    .map-container {
-        max-width: 300px; /* Smaller width for mobile */
+    .research-card, .education-card {
+        padding: 15px; /* Reduced from 20px */
     }
 }
