@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <header class="title-bar sticky">
+    <header class="title-bar news-active"> <!-- Changed to news-active for consistency -->
         <h1 class="logo">Diksha Goel</h1>
         <nav>
             <ul>
@@ -37,7 +37,7 @@
     </section>
 
     <!-- Main Content -->
-    <div class="container">
+    <div class="container news-section fade-in"> <!-- Changed to news-section for compactness -->
         <aside class="left-column">
             <img src="Diksha_Goel.JPG" alt="Diksha Goel" class="profile-photo">
             <div class="social-icons">
@@ -49,13 +49,11 @@
         </aside>
 
         <main class="right-column">
-            <section id="about" class="fade-in">
+            <section id="about">
                 <h2>About Me</h2>
                 <div class="about-card">
-		<p> Dr. Diksha Goel is a Research Scientist at <a href="https://www.csiro.au/en/research/technology-space?start=0&count=12">CSIRO’s Data61</a>, Melbourne, specializing in Cybersecurity, Artificial Intelligence, Game Theory, and Graph Data Mining. Her research focuses on developing AI-driven security solutions to counter emerging cyber threats and safeguard critical infrastructures. Previously, as a Postdoctoral Fellow at <a href="https://www.csiro.au/en/research/technology-space?start=0&count=12">CSIRO’s Data61</a>, she contributed to national cyber defense initiatives through the Cyber Security Cooperative Research Centre (CSCRC). Her research, published in leading cybersecurity journals and conferences, has influenced both academia and industry.
-
-</p> 
-<p>She earned her Ph.D. in Computer Science from the <a href="https://www.adelaide.edu.au/">University of Adelaide</a>, where she designed advanced frameworks for cyber resilience, autonomous defense, and intelligent security strategies. Her expertise spans machine learning-driven security, game-theoretic defense modeling, and large-scale graph analytics for vulnerability detection. Dedicated to bridging research and real-world application, Dr. Goel advances scalable, proactive, and intelligent security frameworks, strengthening digital infrastructure and enhancing cyber resilience.</p>
+                    <p>Dr. Diksha Goel is a Research Scientist at <a href="https://www.csiro.au/en/research/technology-space?start=0&count=12">CSIRO’s Data61</a>, Melbourne, specializing in Cybersecurity, Artificial Intelligence, Game Theory, and Graph Data Mining. Her research focuses on developing AI-driven security solutions to counter emerging cyber threats and safeguard critical infrastructures. Previously, as a Postdoctoral Fellow at <a href="https://www.csiro.au/en/research/technology-space?start=0&count=12">CSIRO’s Data61</a>, she contributed to national cyber defense initiatives through the Cyber Security Cooperative Research Centre (CSCRC). Her research, published in leading cybersecurity journals and conferences, has influenced both academia and industry.</p>
+                    <p>She earned her Ph.D. in Computer Science from the <a href="https://www.adelaide.edu.au/">University of Adelaide</a>, where she designed advanced frameworks for cyber resilience, autonomous defense, and intelligent security strategies. Her expertise spans machine learning-driven security, game-theoretic defense modeling, and large-scale graph analytics for vulnerability detection. Dedicated to bridging research and real-world application, Dr. Goel advances scalable, proactive, and intelligent security frameworks, strengthening digital infrastructure and enhancing cyber resilience.</p>
                 </div>
             </section>
         </main>
@@ -65,10 +63,10 @@
     <div class="section-divider"></div>
 
     <!-- Research Section -->
-    <section class="research-section fade-in">
-        <center><h2>Research</h2></center>
+    <section class="news-section fade-in"> <!-- Changed to news-section -->
+        <h2>Research</h2> <!-- Removed <center> tag -->
         <p>My research focuses on cutting-edge AI-driven cybersecurity solutions to protect critical infrastructures.</p>
-	<p>For a comprehensive list of my publications, please <a href="https://scholar.google.com/citations?hl=en&user=USow104AAAAJ&view_op=list_works&sortby=pubdate">click here</a>.</p>
+        <p>For a comprehensive list of my publications, please <a href="https://scholar.google.com/citations?hl=en&user=USow104AAAAJ&view_op=list_works&sortby=pubdate">click here</a>.</p>
         <div class="research-grid">
             <div class="research-card">
                 <div class="research-icon">
@@ -103,28 +101,24 @@
                 </ul>
             </div>
         </div>
-        
     </section>
-
-
 
     <!-- Divider -->
     <div class="section-divider"></div>
 
     <!-- Education Section -->
-    <section class="education-section fade-in">
-        <center><h2>Education</h2></center>
+    <section class="news-section fade-in"> <!-- Changed to news-section -->
+        <h2>Education</h2> <!-- Removed <center> tag -->
         <div class="education-grid">
             <div class="education-card">
                 <div class="education-icon">
                     <i class="fas fa-user-graduate"></i>
                 </div>
                 <h3>Doctor of Philosophy</h3>
-		<h3>2019 - 2023</h3>
+                <h3 class="duration">2019 - 2023</h3>
                 <ul>
-                    
-                    <li> Computer Science (Cyber Security & Machine Learning)</li>
-                    <li> <a href="https://www.adelaide.edu.au/" target="_blank">University of Adelaide, Australia</a></li>
+                    <li>Computer Science (Cyber Security & Machine Learning)</li>
+                    <li><a href="https://www.adelaide.edu.au/" target="_blank">University of Adelaide, Australia</a></li>
                     <li><strong>Thesis:</strong> <a href="https://arxiv.org/pdf/2310.10667" target="_blank" rel="noopener noreferrer">Enhancing Network Resilience through Machine Learning-powered Graph Combinatorial Optimization</a></li>
                 </ul>
             </div>
@@ -133,10 +127,9 @@
                     <i class="fas fa-graduation-cap"></i>
                 </div>
                 <h3>Master of Technology</h3>
-		<h3>2016 - 2018</h3>
+                <h3 class="duration">2016 - 2018</h3>
                 <ul>
-                    
-                    <li> Computer Science (Cyber Security)</li>
+                    <li>Computer Science (Cyber Security)</li>
                     <li><a href="https://nitkkr.ac.in/" target="_blank">National Institute of Technology, Kurukshetra, India</a></li>
                     <li><a href="https://arxiv.org/pdf/2501.00260" target="_blank" rel="noopener noreferrer">Detection and Prevention of Smishing Attacks</a></li>
                 </ul>
@@ -146,11 +139,10 @@
                     <i class="fas fa-book"></i>
                 </div>
                 <h3>Bachelor of Technology</h3>
-		<h3>2011 - 2015</h3>
+                <h3 class="duration">2011 - 2015</h3>
                 <ul>
-                    
-                    <li> Computer Science & Engineering</li>
-                    <li> <a href="https://www.uietkuk.ac.in/" target="_blank">University Institute of Engineering & Technology, Kurukshetra, India</a></li>
+                    <li>Computer Science & Engineering</li>
+                    <li><a href="https://www.uietkuk.ac.in/" target="_blank">University Institute of Engineering & Technology, Kurukshetra, India</a></li>
                 </ul>
             </div>
         </div>
