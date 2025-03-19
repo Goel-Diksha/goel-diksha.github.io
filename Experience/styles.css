@@ -201,13 +201,14 @@ h2::after {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     width: 90%;
-    transition: transform 0.1s ease, box-shadow 0.1s ease; /* Optimized transition */
+    transition: opacity 0.5s ease, transform 0.5s ease; /* Smoother transition */
     opacity: 0;
+    transform: translateY(20px); /* Start slightly below */
 }
 
 .timeline-item.visible {
     opacity: 1;
-    transition: opacity 0.1s ease; /* Only animate opacity */
+    transform: translateY(0);
 }
 
 .timeline-item:hover {
@@ -225,7 +226,7 @@ h2::after {
     justify-content: center;
     margin-right: 15px;
     flex-shrink: 0;
-    transition: transform 0.1s ease;
+    transition: transform 0.5s ease;
 }
 
 .timeline-icon i {
@@ -312,7 +313,7 @@ footer {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(15px);
+        transform: translateY(20px);
     }
     to {
         opacity: 1;
@@ -322,7 +323,7 @@ footer {
 
 .fade-in {
     opacity: 0;
-    animation: fadeInUp 0.1s ease forwards;
+    animation: fadeInUp 0.5s ease forwards;
 }
 
 /* Responsive */
