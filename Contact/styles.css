@@ -727,7 +727,7 @@ footer {
 
 .fade-in {
     opacity: 0;
-    animation: fadeInUp 0.6s ease forwards;
+    animation: fadeInUp 0.1s ease forwards;
 }
 
 .fade-in:nth-child(1) { animation-delay: 0.1s; }
