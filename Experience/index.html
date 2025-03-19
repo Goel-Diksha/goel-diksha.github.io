@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <header class="title-bar experience-active"> <!-- Corrected to experience-active -->
+    <header class="title-bar experience-active">
         <h1 class="logo">Diksha Goel</h1>
         <nav>
             <ul>
@@ -36,7 +36,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section class="experience-section fade-in"> <!-- Changed to experience-section for consistency -->
+    <section class="experience-section fade-in">
         <div class="timeline">
             <!-- Item 1 -->
             <div class="timeline-item">
@@ -101,12 +101,15 @@
             };
         }
 
-        // Function to check and toggle visibility
+        // Function to check and toggle visibility with stagger
         function checkVisibility() {
-            document.querySelectorAll('.timeline-item').forEach(item => {
+            const items = document.querySelectorAll('.timeline-item:not(.visible)');
+            items.forEach((item, index) => {
                 const rect = item.getBoundingClientRect();
                 if (rect.top <= window.innerHeight * 0.8) {
-                    item.classList.add('visible');
+                    setTimeout(() => {
+                        item.classList.add('visible');
+                    }, index * 200); // 200ms delay between each item
                 }
             });
 
