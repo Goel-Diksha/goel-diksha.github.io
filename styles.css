@@ -191,7 +191,7 @@ nav ul li a.active::after {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     transition: transform 0.1s ease;
     margin-top: 20px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .profile-photo:hover {
