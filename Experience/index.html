@@ -10,7 +10,7 @@
 </head>
 <body>
     <!-- Navigation -->
-    <header class="title-bar news-active"> <!-- Changed to news-active for consistency -->
+    <header class="title-bar experience-active"> <!-- Corrected to experience-active -->
         <h1 class="logo">Diksha Goel</h1>
         <nav>
             <ul>
@@ -36,8 +36,7 @@
     </section>
 
     <!-- Experience Section -->
-    <section class="news-section fade-in"> <!-- Changed to news-section for compactness -->
-
+    <section class="experience-section fade-in"> <!-- Changed to experience-section for consistency -->
         <div class="timeline">
             <!-- Item 1 -->
             <div class="timeline-item">
@@ -90,22 +89,40 @@
 
     <!-- JavaScript for Back-to-Top and Scroll Animations -->
     <script>
-        window.addEventListener('scroll', () => {
-            const backToTop = document.querySelector('.back-to-top');
-            if (window.scrollY > 300) {
-                backToTop.style.display = 'block';
-            } else {
-                backToTop.style.display = 'none';
-            }
+        // Throttle function to limit execution frequency
+        function throttle(func, limit) {
+            let inThrottle;
+            return function() {
+                if (!inThrottle) {
+                    func.apply(this, arguments);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            };
+        }
 
-            // Trigger fade-in animations for timeline items
+        // Function to check and toggle visibility
+        function checkVisibility() {
             document.querySelectorAll('.timeline-item').forEach(item => {
                 const rect = item.getBoundingClientRect();
                 if (rect.top <= window.innerHeight * 0.8) {
                     item.classList.add('visible');
                 }
             });
-        });
+
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        }
+
+        // Run on page load
+        window.addEventListener('load', checkVisibility);
+
+        // Run on scroll with throttling (every 100ms)
+        window.addEventListener('scroll', throttle(checkVisibility, 100));
     </script>
 </body>
 </html>
