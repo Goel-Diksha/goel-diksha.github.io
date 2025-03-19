@@ -1003,7 +1003,7 @@ a:hover {
     position: relative;
     overflow: hidden;
     opacity: 0;
-    transform: translateY(15px); /* Reduced from 30px */
+    transform: transform: none !important; /* Reduced from 30px */
 }
 
 .project-card.visible {
