@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Optional: Preload critical images for faster initial load -->
+    <link rel="preload" href="OverallProblem.png" as="image">
+    <link rel="preload" href="Architecture.png" as="image">
 </head>
 <body>
     <!-- Navigation -->
@@ -43,8 +46,8 @@
                 <h3>Defending Active Directory Attack Graphs</h3>
                 <div class="project-content">
                     <div class="project-images">
-                        <img src="OverallProblem.png" alt="Overall Problem" class="project-image">
-                        <img src="Architecture.png" alt="Architecture" class="project-image">
+                        <img src="OverallProblem.png" alt="Overall Problem" class="project-image" loading="lazy">
+                        <img src="Architecture.png" alt="Architecture" class="project-image" loading="lazy">
                     </div>
                     <p style="text-align: justify; font-size: 12px;">
                         Active Directory (AD) systems face persistent cyber threats, yet traditional defenses lack adaptability. This project addresses edge-blocking inefficiencies using a Stackelberg game model, where an RL-driven attacker and an RL-assisted Evolutionary Diversity Optimization defender refine strategies through adaptive gameplay. To enhance efficiency, an RL Training Facilitator prunes environments and neural networks, improving scalability. Results demonstrate stronger AD security and enhanced scalability, making this a robust defense framework.
@@ -58,7 +61,7 @@
                 <h3>Discovering Critical Structural Hole Spanners</h3>
                 <div class="project-content">
                     <div class="project-images">
-                        <img src="p1.jpg" alt="Project Detail" class="project-image">
+                        <img src="p1.jpg" alt="Project Detail" class="project-image" loading="lazy">
                     </div>
                     <p style="text-align: justify; font-size: 12px;">
                         Structural Hole Spanners (SHS) connect otherwise isolated network communities, yet existing methods struggle with scalability and adaptability across diverse networks. This project introduces GraphSHS, a graph neural network model that reframes SHS discovery as a learning problem, leveraging network structure and node features for efficiency and accuracy. To enhance adaptability, Meta-GraphSHS employs meta-learning, enabling rapid adaptation to unseen graphs. Experiments on synthetic and real-world datasets show GraphSHS significantly outperforms existing methods in speed, while Meta-GraphSHS ensures high accuracy across diverse networks.
@@ -72,7 +75,7 @@
                 <h3>Microservice Vulnerability Analysis</h3>
                 <div class="project-content">
                     <div class="project-images">
-                        <img src="Criticality_Diagram.png" alt="Criticality Diagram" class="project-image">
+                        <img src="Criticality_Diagram.png" alt="Criticality Diagram" class="project-image" loading="lazy">
                     </div>
                     <p style="text-align: justify; font-size: 12px;">
                         Microservice architectures enhance scalability and maintainability but introduce complex security risks, including expanded attack surfaces and intricate dependencies. This project systematically analyzes existing research on microservice vulnerabilities, identifying key risks and mitigation strategies. By synthesizing insights, it provides practical guidelines for securing microservices, advancing both research and industry best practices.
@@ -86,7 +89,7 @@
                 <h3>DDoS Mitigation in Software-Defined Networks</h3>
                 <div class="project-content">
                     <div class="project-images">
-                        <img src="cluster2.jpg" alt="Cluster Diagram" class="project-image">
+                        <img src="cluster2.jpg" alt="Cluster Diagram" class="project-image" loading="lazy">
                     </div>
                     <p style="text-align: justify; font-size: 12px;">
                         Software-Defined Networking (SDN) enhances network efficiency but remains highly vulnerable to DDoS attacks due to its centralized architecture. This project systematically reviews DDoS detection and mitigation strategies, analyzing attack types across SDN planes, security measures, and available datasets, tools, and simulators. By identifying open challenges and future research directions, it provides a comparative analysis of DDoS defense techniques, guiding advancements in SDN security.
@@ -100,7 +103,7 @@
                 <h3>Mechanism Design for Public Projects</h3>
                 <div class="project-content">
                     <div class="project-images">
-                        <img src="public.PNG" alt="Public Project Diagram" class="project-image">
+                        <img src="public.PNG" alt="Public Project Diagram" class="project-image" loading="lazy">
                     </div>
                     <p style="text-align: justify; font-size: 12px;">
                         This project explores mechanism design for both nonexcludable and excludable binary public projects, aiming to maximize consumer participation and agent welfare. For nonexcludable projects, it establishes conditions where the conservative equal costs mechanism is optimal and introduces a dynamic programming approach for optimal mechanism derivation. For excludable projects, it identifies cases where the serial cost-sharing mechanism is near-optimal for small groups and leverages machine learning-based techniques—integrating optimization, neural networks, and efficient training—to enhance mechanism performance, advancing the field of AI-driven mechanism design.
@@ -114,7 +117,7 @@
                 <h3>Smartphone Security from Cyber Threats</h3>
                 <div class="project-content">
                     <div class="project-images">
-                        <img src="smart.PNG" alt="Smartphone Security Diagram" class="project-image">
+                        <img src="smart.PNG" alt="Smartphone Security Diagram" class="project-image" loading="lazy">
                     </div>
                     <p style="text-align: justify; font-size: 12px;">
                         Smartphones, powered by GSM, GPRS, EDGE, and UMTS, are integral to daily life but face rising cyber threats due to their role in internet access, banking, and online transactions. This project analyzes wireless network vulnerabilities, exposing security risks associated with smartphone communication technologies. By identifying key attack vectors, it explores strategies to enhance mobile security frameworks, ensuring safer digital interactions for users.
@@ -138,22 +141,40 @@
 
     <!-- JavaScript for Back-to-Top and Scroll Animations -->
     <script>
-        window.addEventListener('scroll', () => {
-            const backToTop = document.querySelector('.back-to-top');
-            if (window.scrollY > 300) {
-                backToTop.style.display = 'block';
-            } else {
-                backToTop.style.display = 'none';
-            }
+        // Throttle function to limit execution frequency
+        function throttle(func, limit) {
+            let inThrottle;
+            return function() {
+                if (!inThrottle) {
+                    func.apply(this, arguments);
+                    inThrottle = true;
+                    setTimeout(() => inThrottle = false, limit);
+                }
+            };
+        }
 
-            // Trigger fade-in animations for project cards
+        // Function to check and toggle visibility
+        function checkVisibility() {
             document.querySelectorAll('.project-card').forEach(card => {
                 const rect = card.getBoundingClientRect();
                 if (rect.top <= window.innerHeight * 0.8) {
                     card.classList.add('visible');
                 }
             });
-        });
+
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'block';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        }
+
+        // Run on page load
+        window.addEventListener('load', checkVisibility);
+
+        // Run on scroll with throttling (every 100ms)
+        window.addEventListener('scroll', throttle(checkVisibility, 100));
     </script>
 </body>
 </html>
