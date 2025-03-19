@@ -157,8 +157,8 @@ nav ul li a.active::after {
     letter-spacing: 0.5px;
 }
 
-/* News Section (used for Experience) */
-.news-section {
+/* Experience Section */
+.experience-section {
     max-width: 1000px;
     margin: 30px auto;
     padding: 20px;
@@ -201,15 +201,13 @@ h2::after {
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     width: 90%;
-    transition: all 0.1s ease;
+    transition: transform 0.1s ease, box-shadow 0.1s ease; /* Optimized transition */
     opacity: 0;
-    transform: translateY(15px);
 }
 
 .timeline-item.visible {
     opacity: 1;
-    transform: translateY(0);
-    transition: all 0.1s ease;
+    transition: opacity 0.1s ease; /* Only animate opacity */
 }
 
 .timeline-item:hover {
@@ -348,7 +346,7 @@ footer {
     .hero-content h1 {
         font-size: 30px;
     }
-    .news-section {
+    .experience-section {
         padding: 15px;
         margin: 20px auto;
     }
