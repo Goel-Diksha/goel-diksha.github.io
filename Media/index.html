@@ -67,7 +67,7 @@
                         <img src="HACL3.jpg" alt="HACL 1">
                         <div class="carousel-caption">HACL 2024 in Melbourne, Australia</div>
                     </div>
-                    <!-- Removed navigation buttons since there's only one slide -->
+                    <!-- No navigation buttons since there's only one slide -->
                 </div>
             </div>
 
@@ -121,7 +121,7 @@
                         <img src="convo1.jpg" alt="PhD Convocation 1">
                         <div class="carousel-caption">PhD Convocation at the University of Adelaide, Australia</div>
                     </div>
-                    <!-- Removed navigation buttons since there's only one slide -->
+                    <!-- No navigation buttons since there's only one slide -->
                 </div>
             </div>
 
@@ -189,20 +189,21 @@
             slides[activeIndex].classList.add('active');
         }
 
-        // Initialize Carousels on Page Load
+        // Initialize Carousels and Animations on Page Load
         document.addEventListener('DOMContentLoaded', () => {
+            // Initialize carousels
             const carousels = document.querySelectorAll('.carousel-container');
             carousels.forEach(carousel => {
                 const slides = carousel.getElementsByClassName('carousel-slide');
                 if (slides.length > 0) {
-                    // If no slide is marked as active, set the first one as active
+                    // Set the first slide as active if none is set
                     if (!Array.from(slides).some(slide => slide.classList.contains('active'))) {
                         slides[0].classList.add('active');
                     }
                 }
             });
 
-            // Fade-in animations for media categories
+            // Set animation delays for media categories
             const mediaCategories = document.querySelectorAll('.media-category');
             mediaCategories.forEach((category, index) => {
                 category.style.animationDelay = `${(index + 1) * 0.2}s`;
