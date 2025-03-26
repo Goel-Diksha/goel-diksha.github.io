@@ -54,6 +54,10 @@ nav ul {
     list-style: none;
 }
 
+.justified-list li {
+    text-align: justify;
+}
+
 nav ul li a {
     color: #2A3A54;
     text-decoration: none;
