@@ -39,12 +39,12 @@
     <section class="media-section fade-in">
         <div class="media-list-container">
             <!-- ESORICS -->
-            <div class="media-category fade-in-scale" style="animation-delay: 0.2s;">
+            <div class="media-category fade-in-scale">
                 <h3>ESORICS 2024</h3>
                 <div class="carousel-container" id="carousel-esorics">
-                    <div class="carousel-slide active">
+                    <div class="carousel-slide">
                         <img src="ESORICS1.jpg" alt="ESORICS 1">
-                        <div class="carousel-caption"> ESORICS 2024 in Bydgoszcz, Poland</div>
+                        <div class="carousel-caption">ESORICS 2024 in Bydgoszcz, Poland</div>
                     </div>
                     <div class="carousel-slide">
                         <img src="ESORICS2.jpg" alt="ESORICS 2">
@@ -54,59 +54,49 @@
                         <img src="ESORICS3.jpg" alt="ESORICS 3">
                         <div class="carousel-caption">ESORICS 2024 in Bydgoszcz, Poland</div>
                     </div>
-                    <button class="carousel-prev" onclick="changeSlide('carousel-esorics', -1)"></button>
-                    <button class="carousel-next" onclick="changeSlide('carousel-esorics', 1)"></button>
+                    <button class="carousel-prev" onclick="changeSlide('carousel-esorics', -1)">❮</button>
+                    <button class="carousel-next" onclick="changeSlide('carousel-esorics', 1)">❯</button>
                 </div>
             </div>
 
             <!-- HACL -->
-            <div class="media-category fade-in-scale" style="animation-delay: 0.4s;">
+            <div class="media-category fade-in-scale">
                 <h3>HACL 2024</h3>
                 <div class="carousel-container" id="carousel-hacl">
-                    <div class="carousel-slide active">
+                    <div class="carousel-slide">
                         <img src="HACL3.jpg" alt="HACL 1">
                         <div class="carousel-caption">HACL 2024 in Melbourne, Australia</div>
                     </div>
-                    <button class="carousel-prev" onclick="changeSlide('carousel-hacl', -1)"></button>
-                    <button class="carousel-next" onclick="changeSlide('carousel-hacl', 1)"></button>
+                    <!-- Removed navigation buttons since there's only one slide -->
                 </div>
             </div>
 
             <!-- GECCO -->
-<div class="media-category fade-in-scale" style="animation-delay: 0.6s;">
-    <h3>GECCO 2023</h3>
-    <!-- Carousel Container -->
-    <div class="carousel-container" id="carousel-gecco">
-        <!-- Slide 1 -->
-        <div class="carousel-slide">
-            <img src="GECCO1.jpg" alt="GECCO 1">
-            <div class="carousel-caption">GECCO 2023 in Lisbon, Portugal</div>
-        </div>
-        <!-- Slide 2 -->
-        <div class="carousel-slide">
-            <img src="GECCO2.jpg" alt="GECCO 2">
-            <div class="carousel-caption">GECCO 2023 in Lisbon, Portugal</div>
-        </div>
-        <!-- Slide 3 -->
-        <div class="carousel-slide">
-            <img src="GECCO3.jpg" alt="GECCO 3">
-            <div class="carousel-caption">GECCO 2023 in Lisbon, Portugal</div>
-        </div>
-        <!-- Navigation Buttons -->
-        <button class="carousel-prev" onclick="changeSlide('carousel-gecco', -1)">&#10094;</button>
-        <button class="carousel-next" onclick="changeSlide('carousel-gecco', 1)">&#10095;</button>
-    </div>
-</div>
+            <div class="media-category fade-in-scale">
+                <h3>GECCO 2023</h3>
+                <div class="carousel-container" id="carousel-gecco">
+                    <div class="carousel-slide">
+                        <img src="GECCO1.jpg" alt="GECCO 1">
+                        <div class="carousel-caption">GECCO 2023 in Lisbon, Portugal</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="GECCO2.jpg" alt="GECCO 2">
+                        <div class="carousel-caption">GECCO 2023 in Lisbon, Portugal</div>
+                    </div>
+                    <div class="carousel-slide">
+                        <img src="GECCO3.jpg" alt="GECCO 3">
+                        <div class="carousel-caption">GECCO 2023 in Lisbon, Portugal</div>
+                    </div>
+                    <button class="carousel-prev" onclick="changeSlide('carousel-gecco', -1)">❮</button>
+                    <button class="carousel-next" onclick="changeSlide('carousel-gecco', 1)">❯</button>
+                </div>
+            </div>
 
             <!-- AI-OPT -->
-            <div class="media-category fade-in-scale" style="animation-delay: 0.8s;">
+            <div class="media-category fade-in-scale">
                 <h3>AI-OPT 2023</h3>
-                    <div class="carousel-slide">
-                        <img src="AIOPT3.jpg" alt="AI-OPT 3">
-                        <div class="carousel-caption">AI-OPT 2023 in Melbourne, Australia</div>
-                    </div>
                 <div class="carousel-container" id="carousel-aiopt">
-                    <div class="carousel-slide active">
+                    <div class="carousel-slide">
                         <img src="AIOPT1.jpg" alt="AI-OPT 1">
                         <div class="carousel-caption">AI-OPT 2023 in Melbourne, Australia</div>
                     </div>
@@ -114,30 +104,32 @@
                         <img src="AIOPT2.jpg" alt="AI-OPT 2">
                         <div class="carousel-caption">AI-OPT 2023 in Melbourne, Australia</div>
                     </div>
-
-                    <button class="carousel-prev" onclick="changeSlide('carousel-aiopt', -1)"></button>
-                    <button class="carousel-next" onclick="changeSlide('carousel-aiopt', 1)"></button>
+                    <div class="carousel-slide">
+                        <img src="AIOPT3.jpg" alt="AI-OPT 3">
+                        <div class="carousel-caption">AI-OPT 2023 in Melbourne, Australia</div>
+                    </div>
+                    <button class="carousel-prev" onclick="changeSlide('carousel-aiopt', -1)">❮</button>
+                    <button class="carousel-next" onclick="changeSlide('carousel-aiopt', 1)">❯</button>
                 </div>
             </div>
 
             <!-- PhD Convocation -->
-            <div class="media-category fade-in-scale" style="animation-delay: 1.0s;">
+            <div class="media-category fade-in-scale">
                 <h3>PhD Convocation</h3>
                 <div class="carousel-container" id="carousel-convocation">
-                    <div class="carousel-slide active">
+                    <div class="carousel-slide">
                         <img src="convo1.jpg" alt="PhD Convocation 1">
                         <div class="carousel-caption">PhD Convocation at the University of Adelaide, Australia</div>
                     </div>
-                    <button class="carousel-prev" onclick="changeSlide('carousel-convocation', -1)"></button>
-                    <button class="carousel-next" onclick="changeSlide('carousel-convocation', 1)"></button>
+                    <!-- Removed navigation buttons since there's only one slide -->
                 </div>
             </div>
 
             <!-- CSCRC Symposium -->
-            <div class="media-category fade-in-scale" style="animation-delay: 1.2s;">
+            <div class="media-category fade-in-scale">
                 <h3>CSCRC Symposium 2023</h3>
                 <div class="carousel-container" id="carousel-cscrc">
-                    <div class="carousel-slide active">
+                    <div class="carousel-slide">
                         <img src="CSCRC1.jpg" alt="CSCRC Symposium 1">
                         <div class="carousel-caption">CSCRC Symposium 2023 in Canberra, Australia</div>
                     </div>
@@ -145,8 +137,8 @@
                         <img src="CSCRC2.jpg" alt="CSCRC Symposium 2">
                         <div class="carousel-caption">CSCRC Symposium 2023 in Canberra, Australia</div>
                     </div>
-                    <button class="carousel-prev" onclick="changeSlide('carousel-cscrc', -1)"></button>
-                    <button class="carousel-next" onclick="changeSlide('carousel-cscrc', 1)"></button>
+                    <button class="carousel-prev" onclick="changeSlide('carousel-cscrc', -1)">❮</button>
+                    <button class="carousel-next" onclick="changeSlide('carousel-cscrc', 1)">❯</button>
                 </div>
             </div>
         </div>
@@ -163,8 +155,9 @@
     <!-- Back to Top Button -->
     <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
-    <!-- JavaScript for Back-to-Top and Carousel -->
+    <!-- JavaScript for Back-to-Top, Carousel, and Animations -->
     <script>
+        // Back-to-Top and Parallax Effect
         window.addEventListener('scroll', () => {
             const backToTop = document.querySelector('.back-to-top');
             if (window.scrollY > 300) {
@@ -173,20 +166,48 @@
                 backToTop.style.display = 'none';
             }
 
-            // Parallax effect for hero
+            // Parallax effect for hero (optional, may need adjustment due to background-attachment: fixed)
             const hero = document.querySelector('.hero');
             hero.style.backgroundPositionY = `${window.scrollY * 0.5}px`;
         });
 
+        // Carousel Slide Functionality
         function changeSlide(carouselId, direction) {
             const container = document.getElementById(carouselId);
             const slides = container.getElementsByClassName('carousel-slide');
             let activeIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
 
-            slides[activeIndex].classList.remove('active');
+            // Remove active class from current slide
+            if (activeIndex !== -1) {
+                slides[activeIndex].classList.remove('active');
+            }
+
+            // Calculate new index
             activeIndex = (activeIndex + direction + slides.length) % slides.length;
+
+            // Add active class to new slide
             slides[activeIndex].classList.add('active');
         }
+
+        // Initialize Carousels on Page Load
+        document.addEventListener('DOMContentLoaded', () => {
+            const carousels = document.querySelectorAll('.carousel-container');
+            carousels.forEach(carousel => {
+                const slides = carousel.getElementsByClassName('carousel-slide');
+                if (slides.length > 0) {
+                    // If no slide is marked as active, set the first one as active
+                    if (!Array.from(slides).some(slide => slide.classList.contains('active'))) {
+                        slides[0].classList.add('active');
+                    }
+                }
+            });
+
+            // Fade-in animations for media categories
+            const mediaCategories = document.querySelectorAll('.media-category');
+            mediaCategories.forEach((category, index) => {
+                category.style.animationDelay = `${(index + 1) * 0.2}s`;
+            });
+        });
     </script>
 </body>
 </html>
