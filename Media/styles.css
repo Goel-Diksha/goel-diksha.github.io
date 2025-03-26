@@ -878,33 +878,16 @@ a:hover {
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    color: #FFFFFF; /* Ensure the ❮ and ❯ characters are white */
+    font-size: 18px; /* Size of the arrow characters */
 }
 
 .carousel-prev {
     left: 8px;
 }
 
-.carousel-prev::before {
-    content: '';
-    width: 0;
-    height: 0;
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;
-    border-right: 10px solid #FFFFFF;
-    transform: rotate(180deg); /* Points left */
-}
-
 .carousel-next {
     right: 8px;
-}
-
-.carousel-next::before {
-    content: '';
-    width: 0;
-    height: 0;
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;
-    border-left: 10px solid #FFFFFF; /* Points right */
 }
 
 .carousel-prev:hover, .carousel-next:hover {
@@ -1113,17 +1096,7 @@ footer {
     .carousel-prev, .carousel-next {
         width: 30px;
         height: 30px;
-    }
-    .carousel-prev::before {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        border-right: 8px solid #FFFFFF;
-        transform: rotate(180deg); /* Points left */
-    }
-    .carousel-next::before {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        border-left: 8px solid #FFFFFF; /* Points right */
+        font-size: 16px; /* Slightly smaller arrows on mobile */
     }
     .carousel-slide .play-button {
         width: 50px;
